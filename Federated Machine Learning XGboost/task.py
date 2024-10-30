@@ -1,133 +1,95 @@
-"""xgboost_quickstart: A Flower / XGBoost app using the Fridge dataset from CSV with stratified client partitioning and data logging."""
-
 import logging
+from logging import INFO
+
 import xgboost as xgb
-import pandas as pd
-import numpy as np
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
+from flwr.common import log
+from flwr_datasets import FederatedDataset
+from flwr_datasets.partitioner import IidPartitioner
 
-def setup_logger(partition_id):
-    """Set up a logger for the current partition."""
-    logger = logging.getLogger(f"client_{partition_id}")
-    logger.setLevel(logging.DEBUG)
-    
-    file_handler = logging.FileHandler(f'logfile_client_{partition_id}', mode='w')
-    file_handler.setLevel(logging.DEBUG)
-    
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    file_handler.setFormatter(formatter)
-    
-    logger.addHandler(file_handler)
-    
-    return logger
-#must modify this code to get back to just using fridge data
-def load_and_preprocess_data(file_path, logger):
-    """Load, preprocess, and log information about the Fridge dataset."""
-    logger.info(f"Loading data from {file_path}...")
-    data = pd.read_csv(file_path)
-    
-    logger.info("Data info:")
-    logger.info(data.info())
+# Configure logging
+logging.basicConfig(
+    filename='logfileHigs',
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filemode='w'
+)
+logger = logging.getLogger(__name__)
 
+def train_test_split(partition, test_fraction, seed):
+    """Split the data into train and validation set given split rate."""
+    logger.info(f"Starting train-test split with test fraction {test_fraction} and seed {seed}")
     
-    logger.info("Data description:")
-    logger.info(data.describe().to_string())
+    train_test = partition.train_test_split(test_size=test_fraction, seed=seed)
+    partition_train = train_test["train"]
+    partition_test = train_test["test"]
 
+    num_train = len(partition_train)
+    num_test = len(partition_test)
     
-    logger.info("First few rows of the data:")
-    logger.info(data.head().to_string())
-
-    
-    logger.info("Dropping 'type' column...")
-    data = data.drop('type', axis=1)
-    
-    logger.info("Encoding categorical variables...")
-    for col in data.columns:
-        if data[col].dtype == 'object':
-            logger.info(f"Encoding column: {col}")
-            labelEncoder = LabelEncoder()
-            data[col] = labelEncoder.fit_transform(data[col])
-    
-    logger.info("Data info after preprocessing:")
-    logger.info(data.info())
-
-    
-    logger.info("Data description after preprocessing:")
-    logger.info(data.describe().to_string())
+    logger.info(f"Split complete. Train samples: {num_train}, Test samples: {num_test}")
+    return partition_train, partition_test, num_train, num_test
 
 
-    
-    return data
-
-def split_data(data, test_size=0.2, random_state=42, logger=None):
-    """Split the data into train and test sets."""
-    X = data.drop('label', axis=1)
-    y = data['label']
-    
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
-    
-    if logger:
-        logger.info(f"Train set shape: {X_train.shape}")
-        logger.info(f"Test set shape: {X_test.shape}")
-    
-    return X_train, X_test, y_train, y_test
-
-def transform_to_dmatrix(X, y):
+def transform_dataset_to_dmatrix(data):
     """Transform dataset to DMatrix format for xgboost."""
-    return xgb.DMatrix(X, label=y)
+    logger.debug("Starting dataset to DMatrix transformation")
+    x = data["inputs"]
+    y = data["label"]
+    logger.debug(f"Data shape - X: {x.shape}, y: {y.shape}")
+    
+    new_data = xgb.DMatrix(x, label=y)
+    logger.debug("DMatrix transformation complete")
+    return new_data
+
+
+fds = None  # Cache FederatedDataset
+
 
 def load_data(partition_id, num_clients):
-    """Load and prepare Fridge data for two clients."""
-    logger = setup_logger(partition_id)
+    """Load partition HIGGS data."""
+    logger.info(f"Loading data for partition {partition_id} of {num_clients} clients")
     
-    fridge_file_path = r"C:\Users\jackm\OneDrive\Documents\Federated Learning Learning\Train_Test_IoT_Fridge.csv"  
-    thermostat_file_path = r"C:\Users\jackm\OneDrive\Documents\Federated Learning Learning\Train_Test_IoT_Thermostat.csv"
-    if partition_id == 0:
-        data = load_and_preprocess_data(fridge_file_path, logger)
-    
-        logger.info("Splitting data into train and test sets...")
-        X_train, X_test, y_train, y_test = split_data(data, logger=logger)
-        
-        logger.info(f"Creating {num_clients} equal partitions...")
-        # Ensure num_clients is 2
-        assert num_clients == 2, "This implementation supports only 2 clients"
-    
+    # Only initialize `FederatedDataset` once
+    global fds
+    if fds is None:
+        logger.info("Initializing FederatedDataset")
+        partitioner = IidPartitioner(num_partitions=num_clients)
+        fds = FederatedDataset(
+            dataset="jxie/higgs",
+            partitioners={"train": partitioner},
+        )
+        logger.info("FederatedDataset initialization complete")
 
-    
-        logger.info(f"Partition {partition_id} shape: {data.shape}")
-        logger.info(f"Describing Partition {partition_id}: {data.describe().to_string()}")
-        logger.info("Transforming data to DMatrix format...")
-        train_dmatrix = transform_to_dmatrix(X_train, y_train)
-        test_dmatrix = transform_to_dmatrix(X_test, y_test)
-        
-        num_train = len(X_train)
-        num_test = len(X_test)
-    else:
-        data = load_and_preprocess_data(thermostat_file_path, logger)
-    
-        logger.info("Splitting data into train and test sets...")
-        X_train, X_test, y_train, y_test = split_data(data, logger=logger)
-        
-        logger.info(f"Creating {num_clients} equal partitions...")
-        # Ensure num_clients is 2
-        assert num_clients == 2, "This implementation supports only 2 clients"
-    
+    # Load the partition for this `partition_id`
+    logger.info(f"Loading partition {partition_id}")
+    partition = fds.load_partition(partition_id, split="train")
+    partition.set_format("numpy")
+    logger.info("Partition loaded and format set to numpy")
 
-    
-        logger.info(f"Partition {partition_id} shape: {data.shape}")
-        logger.info(f"Describing Partition {partition_id}: {data.describe().to_string()}")
-        logger.info("Transforming data to DMatrix format...")
-        train_dmatrix = transform_to_dmatrix(X_train, y_train)
-        test_dmatrix = transform_to_dmatrix(X_test, y_test)
-        
-        num_train = len(X_train)
-        num_test = len(X_test)
-    
-    return train_dmatrix, test_dmatrix, num_train, num_test
+    # Log the head of the dataset
+    logger.info("Logging the head of the dataset before processing")
+    dataset_head = partition[:5]
+    logger.debug(f"Dataset head: {dataset_head}")
+
+    # Train/test splitting
+    train_data, valid_data, num_train, num_val = train_test_split(
+        partition, test_fraction=0.2, seed=42
+    )
+
+    # Reformat data to DMatrix for xgboost
+    log(INFO, "Reformatting data...")
+    logger.info("Starting DMatrix transformation")
+    train_dmatrix = transform_dataset_to_dmatrix(train_data)
+    valid_dmatrix = transform_dataset_to_dmatrix(valid_data)
+    logger.info("DMatrix transformation complete")
+
+    logger.info(f"Data loading complete. Train samples: {num_train}, Validation samples: {num_val}")
+    return train_dmatrix, valid_dmatrix, num_train, num_val
+
 
 def replace_keys(input_dict, match="-", target="_"):
     """Recursively replace match string with target string in dictionary keys."""
+    logger.debug(f"Replacing '{match}' with '{target}' in dictionary keys")
     new_dict = {}
     for key, value in input_dict.items():
         new_key = key.replace(match, target)
@@ -135,4 +97,5 @@ def replace_keys(input_dict, match="-", target="_"):
             new_dict[new_key] = replace_keys(value, match, target)
         else:
             new_dict[new_key] = value
+    logger.debug("Key replacement complete")
     return new_dict
