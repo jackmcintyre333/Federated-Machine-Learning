@@ -1,0 +1,476 @@
+2024-10-29 22:13:14,149 - INFO - Initializing client for partition 7 of 20
+2024-10-29 22:13:14,149 - INFO - Loading data for partition 5 of 20 clients
+2024-10-29 22:13:14,149 - INFO - Initializing FederatedDataset
+2024-10-29 22:13:14,149 - INFO - FederatedDataset initialization complete
+2024-10-29 22:13:14,149 - INFO - Loading partition 5
+2024-10-29 22:13:14,151 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:14,421 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs HTTP/1.1" 200 2214
+2024-10-29 22:13:14,426 - DEBUG - Starting new HTTPS connection (1): s3.amazonaws.com:443
+2024-10-29 22:13:14,560 - DEBUG - https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/jxie/higgs/jxie/higgs.py HTTP/1.1" 404 0
+2024-10-29 22:13:14,630 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs HTTP/1.1" 200 2214
+2024-10-29 22:13:14,637 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:14,756 - DEBUG - https://huggingface.co:443 "HEAD /datasets/jxie/higgs/resolve/d53733cf80e5059f189f38c1b542d581377629a0/README.md HTTP/1.1" 200 0
+2024-10-29 22:13:14,782 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:14,901 - DEBUG - https://huggingface.co:443 "HEAD /datasets/jxie/higgs/resolve/d53733cf80e5059f189f38c1b542d581377629a0/.huggingface.yaml HTTP/1.1" 404 0
+2024-10-29 22:13:14,995 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:15,046 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:15,110 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:15,172 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/tree/d53733cf80e5059f189f38c1b542d581377629a0/data?recursive=False&expand=False HTTP/1.1" 200 3353
+2024-10-29 22:13:15,216 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:15,273 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:15,347 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:15,410 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:15,470 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:15,521 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:15,529 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:15,532 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:15,534 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:15,535 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:15,537 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:15,676 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:15,685 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:15,687 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:15,695 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:15,727 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:15,771 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:15,821 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:15,905 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:15,961 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:15,971 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:16,115 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:16,161 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:16,201 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:16,253 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:16,308 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:16,312 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:16,444 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:16,494 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:16,547 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 22024-10-29 22:14:33,172 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-10-29 22:14:33,180 - INFO - configure_evaluate: strategy sampled 2 clients (out of 20)
+2024-10-29 22:15:18,206 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-10-29 22:15:18,207 - INFO - 
+2024-10-29 22:15:18,208 - INFO - [ROUND 2]
+2024-10-29 22:15:18,209 - INFO - configure_fit: strategy sampled 2 clients (out of 20)
+2024-10-29 22:15:51,231 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-10-29 22:15:51,281 - INFO - configure_evaluate: strategy sampled 2 clients (out of 20)
+2024-10-29 22:16:19,298 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-10-29 22:16:19,299 - INFO - 
+2024-10-29 22:16:19,299 - INFO - [ROUND 3]
+2024-10-29 22:16:19,300 - INFO - configure_fit: strategy sampled 2 clients (out of 20)
+2024-10-29 22:16:46,322 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-10-29 22:16:46,370 - INFO - configure_evaluate: strategy sampled 2 clients (out of 20)
+2024-10-29 22:17:10,387 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-10-29 22:17:10,390 - INFO - 
+2024-10-29 22:17:10,390 - INFO - [SUMMARY]
+2024-10-29 22:17:10,392 - INFO - Run finished 3 round(s) in 260.53s
+2024-10-29 22:17:10,401 - INFO - 	History (loss, distributed):
+2024-10-29 22:17:10,402 - INFO - 		round 1: 0
+2024-10-29 22:17:10,403 - INFO - 		round 2: 0
+2024-10-29 22:17:10,403 - INFO - 		round 3: 0
+2024-10-29 22:17:10,404 - INFO - 	History (metrics, distributed, evaluate):
+2024-10-29 22:17:10,405 - INFO - 	{'AUC': [(1, 0.7696), (2, 0.77495), (3, 0.77995)]}
+2024-10-29 22:17:10,405 - INFO - 
+2024-10-29 22:17:10,428 - DEBUG - ServerApp finished running.
+2024-10-29 22:17:10,440 - DEBUG - ServerApp finished running.
+2024-10-29 22:17:10,455 - DEBUG - Triggered stop event for Simulation Engine.
+2024-10-29 22:17:11,344 - DEBUG - Terminated 4 actors
+2024-10-29 22:17:12,576 - DEBUG - Terminated RayBackend
+2024-10-29 22:17:12,578 - DEBUG - Stopping Simulation Engine now.
+hs-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:17,385 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:17,499 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:17,550 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:17,598 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:17,645 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:17,701 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:17,706 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:17,859 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:17,917 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:17,975 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:18,024 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:18,081 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:18,085 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:18,213 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:18,264 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:18,329 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:18,389 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 96
+2024-10-29 22:13:18,450 - DEBUG - https://huggingface.co:443 "POST /api/datasets/jxie/higgs/paths-info/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 286
+2024-10-29 22:13:18,457 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:18,577 - DEBUG - https://huggingface.co:443 "GET /api/datasets/jxie/higgs/revision/d53733cf80e5059f189f38c1b542d581377629a0 HTTP/1.1" 200 2214
+2024-10-29 22:13:18,624 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-10-29 22:13:18,752 - DEBUG - https://huggingface.co:443 "HEAD /datasets/jxie/higgs/resolve/d53733cf80e5059f189f38c1b542d581377629a0/dataset_infos.json HTTP/1.1" 404 0
+2024-10-29 22:13:18,755 - DEBUG - Attempting to acquire lock 2241181585296 on C:\Users\jackm\.cache\huggingface\datasets\_Users_jackm_.cache_huggingface_datasets_jxie___higgs_default_0.0.0_d53733cf80e5059f189f38c1b542d581377629a0.lock
+2024-10-29 22:13:18,757 - DEBUG - Lock 2241181585296 acquired on C:\Users\jackm\.cache\huggingface\datasets\_Users_jackm_.cache_huggingface_datasets_jxie___higgs_default_0.0.0_d53733cf80e5059f189f38c1b542d581377629a0.lock
+2024-10-29 22:13:18,759 - DEBUG - open file: C:/Users/jackm/.cache/huggingface/datasets/jxie___higgs/default/0.0.0/d53733cf80e5059f189f38c1b542d581377629a0/dataset_info.json
+2024-10-29 22:13:18,760 - DEBUG - Attempting to release lock 2241181585296 on C:\Users\jackm\.cache\huggingface\datasets\_Users_jackm_.cache_huggingface_datasets_jxie___higgs_default_0.0.0_d53733cf80e5059f189f38c1b542d581377629a0.lock
+2024-10-29 22:13:18,760 - DEBUG - Lock 2241181585296 released on C:\Users\jackm\.cache\huggingface\datasets\_Users_jackm_.cache_huggingface_datasets_jxie___higgs_default_0.0.0_d53733cf80e5059f189f38c1b542d581377629a0.lock
+2024-10-29 22:13:18,863 - DEBUG - Attempting to acquire lock 2241181703824 on C:\Users\jackm\.cache\huggingface\datasets\jxie___higgs\default\0.0.0\d53733cf80e5059f189f38c1b542d581377629a0_builder.lock
+2024-10-29 22:13:18,864 - DEBUG - Lock 1209816528976 not acquired on C:\Users\jackm\.cache\huggingface\datasets\jxie___higgs\default\0.0.0\d53733cf80e5059f189f38c1b542d581377629a0_builder.lo2024-10-29 22:13:18,864 - DEBU2024-10-29 22:13:18,915 - DEBUG - Attempting to acquire lock 1209816528976 on C:\Users\jackm\.cache\huggingface\datasets\jxie___higgs\default\0.0.0\d53733cf80e5059f189f38c1b542d581377629a0_builder.lock
+2024-10-29 22:13:18,915 - DEBUG - Lock 1209816528976 acquired on C:\Users\jackm\.cache\huggingface\datasets\jxie___higgs\default\0.0.0\d53733cf80e5059f189f38c1b542d581377629a0_builder.lock
+2024-10-29 22:13:18,916 - DEBUG - open file: C:/Users/jackm/.cache/huggingface/datasets/jxie___higgs/default/0.0.0/d53733cf80e5059f189f38c1b542d52024-10-29 22:13:21,796 - INFO - Partition loaded and format set to numpy
+2024-10-29 22:13:21,796 - INFO - Logging the head of the dataset before processing
+2024-10-29 22:13:21,809 - DEBUG - Dataset head: {'inputs': array([[ 0.97350913, -0.8699769 , -0.7496078 ,  1.0631638 ,  0.45261368,
+         0.76354164,  0.4924481 , -1.6603454 , -0.97290826, -0.30612037,
+         0.5948169 ,  0.38754347,  1.1577464 , -1.0376828 ,  1.5900269 ,
+        -0.02893216, -0.83779347, -0.46596193,  0.29700154,  1.2713317 ,
+         0.39355084,  1.0657154 , -0.05493568,  5.475131  ,  0.994752024-10-29 22:13:21,809 - DEBUG - Dataset head: {'inputs': array([[-0.5909103 ,  1.577431  , -1.313656  ,  1.046874  ,  0.86997694,
+        -1.2340406 , -0.9929717 , -0.8915773 ,  1.1413517 ,  0.21040499,
+         0.9518832 ,  0.377617  ,  1.1577464 , -0.49053007,  0.9755349 ,
+        -0.7499768 , -0.83779347,  0.48264042,  0.15072115, -1.4631586 ,
+        -0.71416   , -0.33586097,  0.09832114,  1.6002468 ,  1.5405977 ,
+         0.92827564,  0.410636  ,  0.1350462 ],
+       [-0.89388907, -1.7417753 , -1.6599143 , -0.02153427, -0.45047176,
+         3.3218584 , -2.007453  ,  0.83563817, -0.97290826,  2.908124  ,
+        -1.0557723 , -0.9741353 , -0.9528894 ,  0.834307  , -1.1187911 ,
+        -1.3221798 ,  0.22958009,  0.2631767 ,  0.5358435 , -0.47174126,
+        -0.71416   ,  1.9220937 ,  1.2470973 , -0.38071844,  0.06685261,
+        -0.0069646 ,  0.11876752,  0.62616384],
+       [-0.8071387 ,  0.78866076,  0.5726744 ,  2.0188572 , -0.21417235,
+        -0.14960566, -0.28950673,  1.3040632 ,  1.1413517 , -0.36102173,
+         0.29549727, -1.1715609 ,  1.1577464 , -0.8572196 , -0.44023305,
+        -0.8232938 , -0.83779347, -0.37163112, -2.0096002 ,  1.5293862 ,
+        -0.71416   ,  0.03149711,  0.31967786, -0.3848225 , -0.06582433,
+         0.17794757,  0.15336224,  0.79378307],
+       [-0.48635662,  1.3080714 , -1.7282838 ,  0.8123016 , -0.887357  ,
+         1.2409476 ,  0.24814855,  0.63669527, -0.97290826,  1.3550215 ,
+         0.25892442, -0.4381059 ,  1.1577464 ,  0.6383548 ,  0.6344513 ,
+         1.6210774 ,  0.22958009, -0.49868906,  1.2771626 , -1.0589834 ,
+        -0.71416   , -0.5232635 ,  0.6021321 , -0.37819678, -0.47833368,
+         1.0759887 , -0.12983061, -0.36133868],
+       [ 0.11345074,  1.819758  , -0.8174259 ,  0.1585691 , -0.0672024-10-29 22:13:21,810 - INFO - Starting train-test split with test fraction 0.2 and seed 42
+2024-10-29 22:13:22,164 - INFO - Split complete. Train samples: 420000, Test samples: 105000
+2024-10-29 22:13:22,164 - INFO - Reformatting data...
+2024-10-29 22:13:22,165 - INFO - Starting DMatrix transformation
+2024-10-29 22:13:22,165 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:14:20,559 - DEBUG - Data shape - X: (420000, 28), y: (420000,)
+2024-10-29 22:14:20,929 - DEBUG - DMatrix transformation complete
+2024-10-29 22:14:20,935 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:14:30,903 - DEBUG - Data shape - X: (105000, 28), y: (105000,)
+2024-10-29 22:14:30,980 - DEBUG - DMatrix transformation complete
+2024-10-29 22:14:30,981 - INFO - DMatrix transformation complete
+2024-10-29 22:14:30,981 - INFO - Data loading complete. Train samples: 420000, Validation samples: 105000
+2024-10-29 22:14:31,016 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:14:31,016 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:14:31,016 - DEB2024-10-29 22:14:31,108 - DEBUG - DMatrix transformation complete
+2024-10-29 22:14:31,110 - INFO - DMatrix transformation complete
+2024-10-29 22:14:31,110 - INFO - Data loading complete. Train samples: 420000, Validation samples: 105000
+2024-10-29 22:14:31,149 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:14:31,149 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:14:31,149 - DEBUG - Key replacement complete
+2024-10-29 22:14:31,150 - DEBUG - Key replacement complete
+2024-10-29 22:14:31,150 - INFO - Configuration loaded:
+2024-10-29 22:14:31,150 - INFO - Number of local epochs: 1
+2024-10-29 22:14:31,150 - INFO - XGBoost parameters:
+2024-10-29 22:14:31,150 - INFO - {'obj2024-10-29 22:14:32,571 - INFO - Completed first round training
+2024-10-29 22:14:32,574 - INFO - Completed fit operation for round 1
+2024-10-29 22:14:33,224 - INFO - Initializing client for partition 16 of 20
+2024-10-29 22:14:33,224 - INFO - Loading data for partition 16 of 20 clients
+2024-10-29 22:14:33,224 - INFO - Loading partition 16
+2024-10-29 22:14:33,280 - INFO - Partition loaded and format set to numpy
+2024-10-29 22:14:33,280 - INFO - Logging the head of the dataset before processing
+2024-10-29 22:14:33,286 - DEBUG - Dataset head: {'inputs': array([[-0.32839343, -0.13913362,  1.6164116 , -1.3152038 ,  0.76129484,
+        -0.82491815,  0.90844417, -0.36252972,  1.1413517 , -0.96594334,
+         0.63812685, -1.401523  , -0.9528894 ,  0.93912672024-10-29 22:14:33,298 - INFO - Partition loaded and format set to numpy
+2024-10-29 22:14:33,298 - INFO - Logging the head of the dataset before processing
+2024-10-29 22:14:33,302 - DEBUG - Dataset head: {'inputs': array([[-0.46564007,  1.538813  , -0.11829015, -0.36939445,  1.2593925 ,
+        -1.3329937 ,  0.6219563 ,  1.0208038 , -0.97290826, -1.1842893 ,
+         0.59770423,  0.31033793,  0.10242847, -1.2235489 , -1.2342902 ,
+        -0.612163  ,  1.2969537 ,  0.5894842 ,  1.6399709 , -1.3501219 ,
+        -0.71416   ,  0.1682633 , -0.5114319 , -0.375615  ,  0.181261  ,
+        -0.7383292 , -0.6809271 , -0.71736103],
+       [-0.92917186, -1.0727205 , -0.83506966, -1.1760659 ,  0.6648123 ,
+         3.172175  ,  1.5648154 ,  0.44656986, -0.97290826,  2.0954337 ,
+        -0.25694484,  1.4662144 ,  1.1577464 ,  0.9301215 ,  0.29246524,
+        -0.9776453 , -0.83779347,  4.917633  , -0.30216944, -1.0225911 ,
+        -0.71416   , -0.23545916, -1.3704655 , -0.3899332 , -0.05153929,
+        -0.3374838 , -0.09331347, -0.3565016 ],
+       [-0.8754384 ,  0.13119149, -0.6382317 , -1.5171202 ,  0.04589362,
+        -0.30449748,  1.4127413 ,  1.0020669 , -0.97290826,  0.04645685,
+         1.5351235 , -1.1169655 ,  1.1577464 ,  0.4301559 ,  1.5602498 ,
+         0.430917  , -0.83779347, -0.01933442,  0.6011325 , -1.714045  ,
+         1.5012617 , -0.14520846, -0.2877808 , -2.2115366 ,  0.39036486,
+        -0.68373716, -0.5089146 ,  0.06048666],
+       [-0.71812254,  1.4142704 , -1.1565166 ,  0.31127626,  0.8728172 ,
+        -0.3158781 , -0.33660063,  1.0544202 ,  1.1413517 , -0.0540279 ,
+         0.5495821 , -1.1208259 , -0.9528894 ,  0.17332913, -0.19569947,
+         0.08583111,  0.22958009, -0.0934515 ,  1.3126997 , -0.32120943,
+        -0.71416   , -0.0177053 ,  0.57911086,  0.37499255,  0.55030966,
+        -0.10843833,  0.12455127,  0.11637826],
+       [ 0.07784427,  0.21132357, -0.7132176 ,  1.264742  , -0.17036088,
+         2.1566024 , -0.41410935,  0.7794272 , -0.97290826,  0.5755742 ,
+        -0.812024-10-29 22:14:33,524 - INFO - Split complete. Train samples: 420000, Test samples: 105000
+2024-10-29 22:14:33,524 - INFO - Reformatting data...
+2024-10-29 22:14:33,524 - INFO - Starting DMatrix transformation
+2024-10-29 22:14:33,524 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:15:10,097 - DEBUG - Data shape - X: (420000, 28), y: (420000,)
+2024-10-29 22:15:10,811 - DEBUG - DMatrix transformation complete
+2024-10-29 22:15:10,823 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:15:17,832 - DEBUG - Data shape - X: (105000, 28), y: (105000,)
+2024-10-29 22:15:17,906 - DEBUG - DMatrix transformation complete
+2024-10-29 22:15:17,907 - INFO - DMatrix transformation complete
+2024-10-29 22:15:17,907 - INFO - Data loading complete. Train samples: 420000, Validation samples: 105000
+2024-10-29 22:15:17,920 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:15:17,920 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:15:17,920 - DEBUG - Key replacement complete
+2024-10-29 22:15:17,920 - DEBUG - Key replacement complete
+2024-10-29 22:15:17,920 - INFO - Configuration loaded:
+2024-10-29 22:15:17,920 - INFO - Number of local epochs: 1
+2024-10-29 22:15:17,920 - INFO - XGBoost parameters:
+2024-10-29 22:15:17,920 - INFO - {'objective': 'binary:logistic', 'eta': 0.1, 'max_depth': 8, 'eval_metric': 'auc', 'nthread': 16, 'num_parallel_tree': 1, 'subsample': 1, 'tree_method': 'hist'}
+2024-10-29 22:15:17,920 - INFO - Initialized FlowerClient with 420000 training samples and 105000 validation samples
+2024-10-29 22:15:17,920 - INFO - Starting evaluation
+2024-10-29 22:15:17,931 - INFO - Loaded global model for evaluation
+2024-10-29 22:15:17,954 - INFO - Evaluation metrics:
+2024-10-29 22:15:17,954 - INFO - AUC: 0.7689
+2024-10-29 22:15:18,318 - INFO - Initializing client for partition 6 of 20
+2024-10-29 22:15:18,318 - INFO - Loading data for partition 6 of 20 clients
+2024-10-29 22:15:18,319 - INFO - Loading partition 6
+2024-10-29 22:15:18,367 - INFO - Partition loaded and format set to numpy
+2024-10-29 22:15:18,368 - INFO - Logging the head of the dataset before processing
+2024-10-29 22:15:18,371 - DEBUG - Dataset head: {'inputs': array([[-0.79160136, -0.20864579,  1.0722127 ,  0.15036853,  0.04334048,
+        -0.9501046 ,  0.7504834 , -0.6457919 ,  1.1413517 , -0.7010068 ,
+         0.73629594, -1.6017058 ,  1.1577464 , -1.2386776 ,  0.47563985,
+        -1.2020062 , -0.83779347, -0.7321097 , -0.01539382,  0.47235516,
+        -0.71416   , -0.24302638, -0.6227971 , -0.39961144, -0.015169612024-10-29 22:15:18,373 - DEBUG - Dataset head: {'inputs': array([[ 0.1467912 ,  1.9076136 , -1.2221292 , -0.466739  ,  0.6696492 ,
+        -0.4129023 ,  0.539542  ,  0.8119414 ,  1.1413517 , -0.5990113 ,
+         1.1934563 , -0.63773996, -0.9528894 , -1.3045954 , -0.77770734,
+         0.7379662 , -0.83779347,  0.23766908,  0.5738599 , -1.2707206 ,
+        -0.71416   , -0.20446526, -0.39660278,  0.93512446,  0.7589494 ,
+        -0.08916953, -0.01105003, -0.23345877],
+       [-0.70744056, -0.9925885 ,  0.20215593, -0.53687066,  1.1445554 ,
+        -0.4663333 ,  0.10490461, -1.4614025 ,  1.1413517 , -1.2676487 ,
+        -0.8825326 ,  1.5715448 , -0.9528894 , -0.34716818, -0.9446399 ,
+        -0.09287762,  1.2969537 , -0.30810216, -1.8674519 ,  0.45691597,
+        -0.71416   , -0.01653857, -0.28615847, -0.3848149 ,  0.83153427,
+         0.27215588, -0.25554314, -0.19950539],
+       [-0.542356  ,  0.20746179,  0.5831504 ,  0.0343207 ,  1.142377  ,
+        -0.05200273,  0.42867514,  1.5217432 ,  1.1413517 ,  1.1747035 ,
+        -0.47445688, -0.57046086, -0.9528894 , -0.05576175,  0.51624507,
+         0.14095664,  1.2969537 , -0.4977264 ,  0.46642232, -0.69836885,
+        -0.71416   , -0.35714707, -0.3096036 , -0.35661083, -0.07986426,
+         0.32883427, -0.03337732,  0.00446987],
+       [ 1.2327889 , -0.02424545, -1.3357108 , -0.7036653 , -0.5687563 ,
+        -0.44183597,  0.2981858 ,  0.65873885,  0.08422171, -1.4421743 ,
+         1.877753  ,  0.98974633, -0.9528894 , -0.88639635,  0.84559834,
+        -1.413137  , -0.83779347, -0.9963323 , -0.64183736,  0.3968135 ,
+        -0.71416   , -0.20626962, -0.727731  , -0.34012112,  0.2443956 ,
+        -0.6147196 , -0.68509793, -0.8215302 ],
+       [ 0.03187959, -0.8294281 ,  1.1830373 ,  0.00475108, -1.6542369 ,
+        -0.53307366, -0.2708654 ,  0.40744257,  1.1413517 , -0.26658133,
+        -02024-10-29 22:15:18,525 - INFO - Split complete. Train samples: 420000, Test samples: 105000
+2024-10-29 22:15:18,525 - INFO - Reformatting data...
+2024-10-29 22:15:18,525 - INFO - Starting DMatrix transformation
+2024-10-29 22:15:18,525 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:15:43,673 - DEBUG - Data shape - X: (420000, 28), y: (420000,)
+2024-10-29 22:15:44,049 - DEBUG - DMatrix transformation complete
+2024-10-29 22:15:44,054 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:15:49,120 - DEBUG - Data shape - X: (105000, 28), y: (105000,)
+2024-10-29 22:15:49,204 - DEBUG - DMatrix transformation complete
+2024-10-29 22:15:49,206 - INFO - DMatrix transformation complete
+2024-10-29 22:15:49,206 - INFO - Data loading complete. Train samples: 420000, Validation samples: 105000
+2024-10-29 22:15:49,227 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:15:49,227 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:15:49,227 - DEBUG - Key replacement complete
+2024-10-29 22:15:49,227 - DEBUG - Key replacement complete
+2024-10-29 22:15:49,227 - INFO - Configuration loaded:
+2024-10-29 22:15:49,227 - INFO - Number of local epochs: 1
+2024-10-29 22:15:49,228 - INFO - XGB2024-10-29 22:15:49,247 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:15:49,247 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:15:49,247 - DEBUG - Key replacement complete
+2024-10-29 22:15:49,247 - DEBUG - Key replacement complete
+2024-10-29 22:15:49,247 - INFO - Configuration loaded:
+2024-10-29 22:15:49,247 - INFO - Number of local epochs: 1
+2024-10-29 22:15:49,247 - INFO - XGBoost parameters:
+2024-10-29 22:15:49,247 - INFO - {'objective': 'binary:logistic', 'eta': 0.1, 'max_depth': 8, 'eval_metri2024-10-29 22:15:50,816 - INFO - Completed boost round 0/1
+2024-10-29 22:15:50,819 - INFO - Completed local boost operation
+2024-10-29 22:15:50,827 - INFO - Completed fit operation for round 2
+2024-10-29 22:15:51,328 - INFO - Initializing client for partition 18 of 20
+2024-10-29 22:15:51,328 - INFO - Loading data for partition 18 of 20 clients
+2024-10-29 22:15:51,328 - INFO - Loading partition 18
+2024-10-29 22:15:51,367 - INFO - Partition loaded and format set to numpy
+2024-10-29 22:15:51,367 - INFO - Logging the head of the dataset before processing
+2024-10-29 22:15:51,370 - DEBUG - Dataset head: {'inputs': array([[-0.01020093, -0.83618623,  1.1835886 , -0.12145865, -1.517284  ,
+        -0.85057276,  1.2488939 ,  0.12693863, -0.97290826,  0.01447288,
+         1.2694893 , -0.4281795 ,  1.1577464 ,  0.05049908,  2.1413553 ,
+         0.40170047, -0.83779347,  2.4890957 , -0.12200494, -1.3892713 ,
+         0.39355084, -0.23918103, -0.389528  , -0.35307384, -0.7237172 ,
+         1.000267  ,  0.57934105,  1.0721371 ],
+       [-0.21898438,  0.54633355, -1.702921  , -1.5523118 , -0.23813303,
+         0.13587321, -0.2316205 , -0.01809972,  1.1413517 ,  0.05728585,
+        -0.55145234,  1.4502218 , -0.9528894 ,  0.41826916,  0.5225614 ,
+        -0.82164   ,  1.2969537 ,  0.28098395, -0.6558869 ,  1.0557349 ,
+        -0.71416   , -0.17130688,  0.18194386, -0.33352473, -0.02510978,
+         0.24473436, -0.228198  , -0.46709943],
+       [-0.408346  , -0.04258893, -0.813015  ,  0.34992263,  0.24979305,
+        -0.90111023, -0.6368242 , -1.3759838 ,  1.1413517 , -0.12403962,
+        -0.6457717 ,  1.0002242 ,  1.1577464 , -1.17276   ,  1.3166187 ,
+        -1.413137  , -0.83779347, -0.4775127 , -0.37241706,  0.11174046,
+        -0.71416   , -0.17922738, -0.26784343,  0.24777487, -0.30674705,
+        -0.16089001, -0.7294022 , -0.8209059 ],
+       [-0.30314508,  0.67280716,  1.0115622 , -1.0377012 , -0.5452242 ,
+        -0.19821434,  1.1664796 ,  0.24376935,  1.1413517 ,  0.00591036,
+        -0.5206541 , -1.4892063 , -0.9528894 , -0.232983  ,  0.4178902 ,
+        -1.5741035 , -0.83779347,  0.31371108, -0.08398857, -0.2864713 ,
+         1.5012617 , -0.40834635, -0.35314688, -0.38392702, -0.30409107,
+        -0.15422636,  0.00479291, -0.35338718],
+       [-0.2134815 , -0.34573928,  0.8252004 , -1.437913  ,  0.07743988,
+         0.01377311, -1.2451203 , -1.2404162 , -0.97290826,  0.01497661,
+        -1.3319932 , -1.7230288 ,  1.1577464 ,  0.5050786 , -0.635138  ,
+         0.202146  , -0.83779347, -1.159486  , -0.40712768,  1.2768457 ,
+         1.5012617 , -0.14296108,  0.5643479 , -0.40592322, -1.2734004 ,
+        -1.1830462 , -0.8319237 , -0.46945244]], dtype=float32), 'label': array([0., 1., 0., 1., 1.], dtype=float32)}
+2024-10-29 22:15:51,370 - INFO - Starting train-test split with test fraction 0.2 and seed 42
+2024-10-29 22:15:51,520 - INFO - Split complete. Train samples: 420000, Test samples: 105000
+2024-10-29 22:15:51,520 - INFO - Reformatting data...
+2024-10-29 22:15:51,520 - INFO - Starting DMatrix transformation
+2024-10-29 22:15:51,520 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:16:14,107 - DEBUG - Data shape - X: (420000, 28), y: (420000,)
+2024-10-29 22:16:14,426 - DEBUG - DMatrix transformation complete
+2024-10-29 22:16:14,432 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:16:18,440 - DEBUG - Data shape - X: (105000, 28), y: (105000,)
+2024-10-29 22:16:18,506 - DEBUG - DMatrix transformation complete
+2024-10-29 22:16:18,508 - INFO - DMatrix transformation complete
+2024-10-29 22:16:18,508 - INFO - Data loading complete. Train samples: 420000, Validation samples: 105000
+2024-10-29 22:16:18,521 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:16:18,521 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:16:18,521 - DEBUG - Key replacement complete
+2024-10-29 22:16:18,521 - DEBUG - Key replacement complete
+2024-10-29 22:16:18,521 - INFO - Configuration loaded:
+2024-10-29 22:16:18,521 - INFO - Number of local epochs: 1
+2024-10-29 22:16:18,521 - INFO - XGBoost parameters:
+2024-10-29 22:16:18,522 - INFO - {'objective': 'binary:logistic', 'eta': 0.1, 'max_depth': 8, 'eval_metric': 'auc', 'nthread': 16, 'num_parallel_tree': 1, 'subsample': 1, 'tree_method': 'hist'}
+2024-10-29 22:16:18,522 - INFO - Initialized FlowerClient with 420000 training samples and 105000 validation samples
+2024-10-29 22:16:18,522 - INFO - Starting evaluation
+2024-10-29 22:16:18,534 - INFO - Loaded global model for evaluation
+2024-10-29 22:16:18,555 - INFO - Evaluation metrics:
+2024-10-29 22:16:18,556 - INFO - AUC: 0.7751
+2024-10-29 22:16:19,408 - INFO - Initializing client for partition 9 of 20
+2024-10-29 22:16:19,408 - INFO - Loading data for partition 9 of 20 clients
+2024-10-29 22:16:19,408 - INFO - Loading partition 9
+2024-10-29 22:16:19,572 - INFO - Partition loaded and format set to numpy
+2024-10-29 22:16:19,572 - INFO - Logging the head of the dataset before processing
+2024-10-29 22:16:19,574 - DEBUG - Dataset head: {'inputs': array([[-0.87252516,  0.03464681,  0.46681198,  0.6789222 ,  1.5268179 ,
+         0.7010447 ,  1.4048924 , -0.20657174, -0.97290826,  1.1953546 ,
+        -1.3214064 ,  1.4706261 ,  1.1577464 , -1.2109418 , -2.6798353 ,
+        -1.2736694 , -0.83779347, -0.35911798,  0.6019589 , -1.0600863 ,
+         1.5012617 , -0.3008459 , -0.46088728, -0.37578663,  0.9033841 ,
+         0.9883085 ,  3.3568249 ,  2.3785322 ],
+       [-0.980963  ,  0.6158458 , -0.3267068 , -0.62281626,  0.74302304,
+         0.43562648,  0.8476146 , -1.6812867 ,  1.1413517 , -0.7365164 ,
+         2.662144  ,  0.05114808, -0.9528894 , -1.0175112 ,  2.015028  ,
+        -0.97544026, -0.83779347, -0.64692324,  1.2060885 ,  0.79382044,
+        -0.71416   , -0.37095043, -0.54760844, -0.36883247,  0.6333891 ,
+        -0.2587236 , -0.25241506,  0.2701044 ],
+       [ 0.6096757 , -1.0012774 , -0.38570303, -0.7940377 ,  1.2722207 ,
+         1.1772934 , -0.5524477 ,  0.46585792, -0.97290826,  1.0155401 ,
+        -0.75741506, -1.2548326 ,  1.1577464 ,  1.1152672 , -0.9617843 ,
+         1.5918609 ,  1.2969537 , -0.49917036, -0.13770735, -0.36091065,
+        -0.71416   ,  0.18157127,  1.1631821 ,  0.63167435, -0.11873526,
+        -0.16513182,  0.55674505,  0.21952383],
+       [-0.3513758 , -0.3225685 , -0.12270109,  0.44365945, -0.07286579,
+         0.26395315,  0.8299544 ,  1.3294133 ,  1.1413517 ,  0.25321808,
+         0.9335968 , -1.0430688 ,  1.1577464 , -1.0301183 ,  1.3328607 ,
+        -1.6397029 , -0.83779347,  0.32237405,  1.3044351 ,  0.4756635 ,
+        -0.71416   , -0.3781777 , -0.3473295 , -0.4156384 ,  2.5971918 ,
+         0.7717931 ,  1.6184541 ,  1.3460976 ],
+       [ 0.25458178, -0.2009222 ,  1.292208  , -0.9331124 , -1.5090003 ,
+        -0.01786108,  0.46693894, -1.5176135 ,  1.1413517 ,  0.9528319 ,
+         0.38596687, -0.27321702, -0.9528894 , -0.5683346 ,  0.97012097,
+         1.0367466 ,  1.2969537 , -0.30569583, -1.3071238 , -0.0615007 ,
+        -0.71416   ,  0.9807607 ,  0.9411826 , -0.42547992, -0.72285336,
+        -0.27245703,  0.31905398,  0.05376463]], dtype=float32), 'label': array([0., 1., 1., 0., 1.], dtype=float32)}
+2024-10-29 22:16:19,574 - INFO - Starting train-test split with test fraction 0.2 and seed 42
+2024-10-29 22:16:19,733 - INFO - Split complete. Train samples: 420000, Test samples: 105000
+2024-10-29 22:16:19,733 - INFO - Reformatting data...
+2024-10-29 22:16:19,734 - INFO - Starting DMatrix transformation
+2024-10-29 22:16:19,734 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:16:39,196 - DEBUG - Data shape - X: (420000, 28), y: (420000,)
+2024-10-29 22:16:39,525 - DEBUG - DMatrix transformation complete
+2024-10-29 22:16:39,530 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:16:44,395 - DEBUG - Data shape - X: (105000, 28), y: (105000,)
+2024-10-29 22:16:44,474 - DEBUG - DMatrix transformation complete
+2024-10-29 22:16:44,475 - INFO - DMatrix transformation complete
+2024-10-29 22:16:44,475 - INFO - Data loading complete. Train samples: 420000, Validation samples: 105000
+2024-10-29 22:16:44,492 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:16:44,492 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:16:44,492 - DEBUG - Key replacement complete
+2024-10-29 22:16:44,492 - DEBUG - Key replacement complete
+2024-10-29 22:16:44,492 - INFO - Configuration loaded:
+2024-10-29 22:16:44,492 - INFO - Number of local epochs: 1
+2024-10-29 22:16:44,492 - INFO - XGBoost parameters:
+2024-10-29 22:16:44,492 - INFO - {'objective': 'binary:logistic', 'eta': 0.1, 'max_depth': 8, 'eval_metric': 'auc', 'nthread': 16, 'num_parallel_tree': 1, 'subsample': 1, 'tree_method': 'hist'}
+2024-10-29 22:16:44,492 - INFO - Initialized FlowerClient with 420000 training samples and 105000 validation samples
+2024-10-29 22:16:44,492 - INFO - Starting fit operation for global round 3
+2024-10-29 22:16:44,504 - INFO - Loaded global model for continued training
+2024-10-29 22:16:44,504 - INFO - Starting local boost operation
+2024-10-29 22:16:45,774 - INFO - Completed boost round 0/1
+2024-10-29 22:16:45,776 - INFO - Completed local boost operation
+2024-10-29 22:16:45,781 - INFO - Completed fit operation for round 3
+2024-10-29 22:16:46,397 - INFO - Initializing client for partition 4 of 20
+2024-10-29 22:16:46,397 - INFO - Loading data for partition 4 of 20 clients
+2024-10-29 22:16:46,398 - INFO - Loading partition 4
+2024-10-29 22:16:46,447 - INFO - Partition loaded and format set to numpy
+2024-10-29 22:16:46,447 - INFO - Logging the head of the dataset before processing
+2024-10-29 22:16:46,450 - DEBUG - Dataset head: {'inputs': array([[-0.6362275 , -0.7994993 , -0.5081064 , -0.1350882 , -1.1849174 ,
+        -0.7830608 ,  0.4021848 ,  0.03766232,  1.1413517 , -0.18297018,
+        -0.40131125,  1.1336794 , -0.9528894 , -0.49917507,  0.84830534,
+        -0.8227426 ,  1.2969537 ,  0.08510331, -1.8195182 ,  0.0577034 ,
+        -0.71416   ,  0.9044301 ,  1.2114469 , -0.3713842 ,  0.66880476,
+        -0.63621914,  0.19696625,  0.406585  ],
+       [ 0.03544021,  0.14760408,  0.10621811, -0.40501714,  1.1627389 ,
+        -1.0108653 ,  0.53365535,  0.8042261 ,  1.1413517 , -0.8770436 ,
+         2.4600308 , -1.4153097 , -0.9528894 , -0.33852342, -0.573779  ,
+        -1.2367353 ,  1.2969537 ,  0.82819915,  0.36476985, -0.5886405 ,
+        -0.71416   ,  0.0294594 , -0.04109358, -0.3617889 , -1.0885499 ,
+        -0.08521347, -0.79519486, -0.88815707],
+       [-0.2562093 , -0.16520068, -1.1791226 , -1.1186048 , -0.05567002,
+        -0.01419606,  0.20105465,  0.15945283,  1.1413517 ,  0.36579084,
+        -0.2627195 ,  1.6564708 , -0.9528894 , -0.36229688, -0.8363593 ,
+        -1.2306715 , -0.83779347, -1.1200211 ,  0.5689012 , -0.42156395,
+        -0.71416   , -0.19624883, -0.7401114 , -0.4004019 ,  0.02452656,
+        -0.2680196 , -0.32123804, -0.47960722],
+       [-0.16330877,  0.15243134, -0.65642685, -0.9320215 ,  1.5408926 ,
+        -1.0288042 , -0.2698843 ,  0.48018622, -0.97290826,  0.27815023,
+        -1.1645283 ,  0.8463647 , -0.9528894 , -0.12924372, -0.01884127,
+        -0.40764445,  1.2969537 ,  0.44654432,  0.5341906 , -1.5144387 ,
+         1.5012617 , -0.147542  ,  0.08801644, -0.39112017, -0.83536655,
+        -0.44833636, -0.37515426, -0.57665485],
+       [-0.3105901 , -0.09858485,  0.14646788, -0.8807565 ,  1.2381425 ,
+        -1.1534121 ,  0.32271388,  1.4010547 , -0.97290826, -0.13688329,
+        -1.2011011 ,  0.15261815,  0.10242847, -0.46171373,  1.0260658 ,
+        -1.2416966 , -0.83779347, -0.6512547 , -0.39555746, -1.0435443 ,
+         1.5012617 , -0.29897055, -0.9923238 , -0.3812109 ,  0.03614258,
+        -0.5562977 , -0.4713467 , -0.6009776 ]], dtype=float32), 'label': array([1., 1., 1., 1., 1.], dtype=float32)}
+2024-10-29 22:16:46,450 - INFO - Starting train-test split with test fraction 0.2 and seed 42
+2024-10-29 22:16:46,606 - INFO - Split complete. Train samples: 420000, Test samples: 105000
+2024-10-29 22:16:46,607 - INFO - Reformatting data...
+2024-10-29 22:16:46,607 - INFO - Starting DMatrix transformation
+2024-10-29 22:16:46,607 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:17:05,204 - DEBUG - Data shape - X: (420000, 28), y: (420000,)
+2024-10-29 22:17:05,568 - DEBUG - DMatrix transformation complete
+2024-10-29 22:17:05,575 - DEBUG - Starting dataset to DMatrix transformation
+2024-10-29 22:17:09,987 - DEBUG - Data shape - X: (105000, 28), y: (105000,)
+2024-10-29 22:17:10,074 - DEBUG - DMatrix transformation complete
+2024-10-29 22:17:10,075 - INFO - DMatrix transformation complete
+2024-10-29 22:17:10,075 - INFO - Data loading complete. Train samples: 420000, Validation samples: 105000
+2024-10-29 22:17:10,092 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:17:10,092 - DEBUG - Replacing '-' with '_' in dictionary keys
+2024-10-29 22:17:10,092 - DEBUG - Key replacement complete
+2024-10-29 22:17:10,092 - DEBUG - Key replacement complete
+2024-10-29 22:17:10,092 - INFO - Configuration loaded:
+2024-10-29 22:17:10,092 - INFO - Number of local epochs: 1
+2024-10-29 22:17:10,092 - INFO - XGBoost parameters:
+2024-10-29 22:17:10,092 - INFO - {'objective': 'binary:logistic', 'eta': 0.1, 'max_depth': 8, 'eval_metric': 'auc', 'nthread': 16, 'num_parallel_tree': 1, 'subsample': 1, 'tree_method': 'hist'}
+2024-10-29 22:17:10,092 - INFO - Initialized FlowerClient with 420000 training samples and 105000 validation samples
+2024-10-29 22:17:10,093 - INFO - Starting evaluation
+2024-10-29 22:17:10,114 - INFO - Loaded global model for evaluation
+2024-10-29 22:17:10,149 - INFO - Evaluation metrics:
+2024-10-29 22:17:10,149 - INFO - AUC: 0.7811
+2024-10-29 22:17:11,347 - WARNING - Manually terminating ClientAppActor
+method': 'hist'}
+2024-10-29 22:17:10,051 - INFO - Initialized FlowerClient with 420000 training samples and 105000 validation samples
+2024-10-29 22:17:10,051 - INFO - Starting evaluation
+2024-10-29 22:17:10,072 - INFO - Loaded global model for evaluation
+2024-10-29 22:17:10,109 - INFO - Evaluation metrics:
+2024-10-29 22:17:10,109 - INFO - AUC: 0.7788
+2024-10-29 22:17:11,345 - WARNING - Manually terminating ClientAppActor

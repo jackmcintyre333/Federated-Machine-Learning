@@ -1,0 +1,520 @@
+2024-10-29 22:27:31,255 - client_0 - INFO - Loading data from C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv...
+2024-10-29 22:27:31,324 - client_0 - INFO - Data info:
+2024-10-29 22:27:31,337 - client_0 - INFO - None
+2024-10-29 22:27:31,337 - client_0 - INFO - Data description:
+2024-10-29 22:27:31,351 - client_0 - INFO -                  ts  fridge_temperature         label
+count  5.994400e+04        59944.000000  59944.000000
+mean   1.555034e+09            7.131876      0.416122
+std    1.101367e+06            3.619223      0.492918
+min    1.554061e+09            1.000000      0.000000
+25%    1.554061e+09            4.200000      0.000000
+50%    1.554203e+09            6.700000      0.000000
+75%    1.556246e+09           10.250000      1.000000
+max    1.556526e+09           14.000000      1.000000
+2024-10-29 22:27:31,352 - client_0 - INFO - First few rows of the data:
+2024-10-29 22:27:31,354 - client_0 - INFO -            ts       date        time  fridge_temperature temp_condition  label  type
+0  1556245180  25-Apr-19   19:19:40                 9.00           high      1  ddos
+1  1556245180  25-Apr-19   19:19:40                 9.25           high      1  ddos
+2  1556245185  25-Apr-19   19:19:45                12.65           high      1  ddos
+3  1556245185  25-Apr-19   19:19:45                 4.65            low      1  ddos
+4  1556245195  25-Apr-19   19:19:55                12.65           high      1  ddos
+2024-10-29 22:27:31,354 - client_0 - INFO - Dropping 'type' column...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding categorical variables...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding column: date
+2024-10-29 22:27:31,366 - client_0 - INFO - Encoding column: time
+2024-10-29 22:27:31,407 - client_0 - INFO - Encoding column: temp_condition
+2024-10-29 22:27:31,421 - client_0 - INFO - Data info after preprocessing:
+2024-10-29 22:27:31,425 - client_0 - INFO - None
+2024-10-29 22:27:31,426 - client_0 - INFO - Data description after preprocessing:
+2024-10-29 22:27:31,441 - client_0 - INFO -                  ts          date          time  fridge_temperature  temp_condition         label
+count  5.994400e+04  59944.000000  59944.000000        59944.000000    59944.000000  59944.000000
+mean   1.555034e+09      4.268017   4412.371997            7.131876        2.071667      0.416122
+std    1.101367e+06      2.514148   5658.703156            3.619223        1.655336      0.492918
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000      0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000      0.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000      0.000000
+75%    1.556246e+09      7.000000   8473.250000           10.250000        4.000000      1.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000      1.000000
+2024-10-29 22:27:31,441 - client_0 - INFO - Splitting data into train and test sets...
+2024-10-29 22:27:31,459 - client_0 - INFO - Train set shape: (47955, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Test set shape: (11989, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Creating 2 equal partitions...
+2024-10-29 22:27:31,460 - client_0 - INFO - Partition 0 shape: (23977, 5)
+2024-10-29 22:27:31,472 - client_0 - INFO - Describing Partition 0:                  ts          date          time  fridge_temperature  temp_condition
+count  2.397700e+04  23977.000000  23977.000000        23977.000000    23977.000000
+mean   1.555036e+09      4.257538   4431.152855            7.133332        2.074947
+std    1.101797e+06      2.514147   5677.960110            3.617386        1.656630
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000
+75%    1.556311e+09      7.000000   8493.000000           10.250000        4.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000
+2024-10-29 22:27:31,472 - client_0 - INFO - Transforming data to DMatrix format...
+2024-10-29 22:27:31,255 - client_0 - INFO - Loading data from C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv...
+2024-10-29 22:27:31,324 - client_0 - INFO - Data info:
+2024-10-29 22:27:31,337 - client_0 - INFO - None
+2024-10-29 22:27:31,337 - client_0 - INFO - Data description:
+2024-10-29 22:27:31,351 - client_0 - INFO -                  ts  fridge_temperature         label
+count  5.994400e+04        59944.000000  59944.000000
+mean   1.555034e+09            7.131876      0.416122
+std    1.101367e+06            3.619223      0.492918
+min    1.554061e+09            1.000000      0.000000
+25%    1.554061e+09            4.200000      0.000000
+50%    1.554203e+09            6.700000      0.000000
+75%    1.556246e+09           10.250000      1.000000
+max    1.556526e+09           14.000000      1.000000
+2024-10-29 22:27:31,352 - client_0 - INFO - First few rows of the data:
+2024-10-29 22:27:31,354 - client_0 - INFO -            ts       date        time  fridge_temperature temp_condition  label  type
+0  1556245180  25-Apr-19   19:19:40                 9.00           high      1  ddos
+1  1556245180  25-Apr-19   19:19:40                 9.25           high      1  ddos
+2  1556245185  25-Apr-19   19:19:45                12.65           high      1  ddos
+3  1556245185  25-Apr-19   19:19:45                 4.65            low      1  ddos
+4  1556245195  25-Apr-19   19:19:55                12.65           high      1  ddos
+2024-10-29 22:27:31,354 - client_0 - INFO - Dropping 'type' column...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding categorical variables...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding column: date
+2024-10-29 22:27:31,366 - client_0 - INFO - Encoding column: time
+2024-10-29 22:27:31,407 - client_0 - INFO - Encoding column: temp_condition
+2024-10-29 22:27:31,421 - client_0 - INFO - Data info after preprocessing:
+2024-10-29 22:27:31,425 - client_0 - INFO - None
+2024-10-29 22:27:31,426 - client_0 - INFO - Data description after preprocessing:
+2024-10-29 22:27:31,441 - client_0 - INFO -                  ts          date          time  fridge_temperature  temp_condition         label
+count  5.994400e+04  59944.000000  59944.000000        59944.000000    59944.000000  59944.000000
+mean   1.555034e+09      4.268017   4412.371997            7.131876        2.071667      0.416122
+std    1.101367e+06      2.514148   5658.703156            3.619223        1.655336      0.492918
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000      0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000      0.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000      0.000000
+75%    1.556246e+09      7.000000   8473.250000           10.250000        4.000000      1.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000      1.000000
+2024-10-29 22:27:31,441 - client_0 - INFO - Splitting data into train and test sets...
+2024-10-29 22:27:31,459 - client_0 - INFO - Train set shape: (47955, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Test set shape: (11989, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Creating 2 equal partitions...
+2024-10-29 22:27:31,460 - client_0 - INFO - Partition 0 shape: (23977, 5)
+2024-10-29 22:27:31,472 - client_0 - INFO - Describing Partition 0:                  ts          date          time  fridge_temperature  temp_condition
+count  2.397700e+04  23977.000000  23977.000000        23977.000000    23977.000000
+mean   1.555036e+09      4.257538   4431.152855            7.133332        2.074947
+std    1.101797e+06      2.514147   5677.960110            3.617386        1.656630
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000
+75%    1.556311e+09      7.000000   8493.000000           10.250000        4.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000
+2024-10-29 22:27:31,472 - client_0 - INFO - Transforming data to DMatrix format...
+2024-10-29 22:27:31,255 - client_0 - INFO - Loading data from C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv...
+2024-10-29 22:27:31,324 - client_0 - INFO - Data info:
+2024-10-29 22:27:31,337 - client_0 - INFO - None
+2024-10-29 22:27:31,337 - client_0 - INFO - Data description:
+2024-10-29 22:27:31,351 - client_0 - INFO -                  ts  fridge_temperature         label
+count  5.994400e+04        59944.000000  59944.000000
+mean   1.555034e+09            7.131876      0.416122
+std    1.101367e+06            3.619223      0.492918
+min    1.554061e+09            1.000000      0.000000
+25%    1.554061e+09            4.200000      0.000000
+50%    1.554203e+09            6.700000      0.000000
+75%    1.556246e+09           10.250000      1.000000
+max    1.556526e+09           14.000000      1.000000
+2024-10-29 22:27:31,352 - client_0 - INFO - First few rows of the data:
+2024-10-29 22:27:31,354 - client_0 - INFO -            ts       date        time  fridge_temperature temp_condition  label  type
+0  1556245180  25-Apr-19   19:19:40                 9.00           high      1  ddos
+1  1556245180  25-Apr-19   19:19:40                 9.25           high      1  ddos
+2  1556245185  25-Apr-19   19:19:45                12.65           high      1  ddos
+3  1556245185  25-Apr-19   19:19:45                 4.65            low      1  ddos
+4  1556245195  25-Apr-19   19:19:55                12.65           high      1  ddos
+2024-10-29 22:27:31,354 - client_0 - INFO - Dropping 'type' column...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding categorical variables...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding column: date
+2024-10-29 22:27:31,366 - client_0 - INFO - Encoding column: time
+2024-10-29 22:27:31,407 - client_0 - INFO - Encoding column: temp_condition
+2024-10-29 22:27:31,421 - client_0 - INFO - Data info after preprocessing:
+2024-10-29 22:27:31,425 - client_0 - INFO - None
+2024-10-29 22:27:31,426 - client_0 - INFO - Data description after preprocessing:
+2024-10-29 22:27:31,441 - client_0 - INFO -                  ts          date          time  fridge_temperature  temp_condition         label
+count  5.994400e+04  59944.000000  59944.000000        59944.000000    59944.000000  59944.000000
+mean   1.555034e+09      4.268017   4412.371997            7.131876        2.071667      0.416122
+std    1.101367e+06      2.514148   5658.703156            3.619223        1.655336      0.492918
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000      0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000      0.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000      0.000000
+75%    1.556246e+09      7.000000   8473.250000           10.250000        4.000000      1.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000      1.000000
+2024-10-29 22:27:31,441 - client_0 - INFO - Splitting data into train and test sets...
+2024-10-29 22:27:31,459 - client_0 - INFO - Train set shape: (47955, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Test set shape: (11989, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Creating 2 equal partitions...
+2024-10-29 22:27:31,460 - client_0 - INFO - Partition 0 shape: (23977, 5)
+2024-10-29 22:27:31,472 - client_0 - INFO - Describing Partition 0:                  ts          date          time  fridge_temperature  temp_condition
+count  2.397700e+04  23977.000000  23977.000000        23977.000000    23977.000000
+mean   1.555036e+09      4.257538   4431.152855            7.133332        2.074947
+std    1.101797e+06      2.514147   5677.960110            3.617386        1.656630
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000
+75%    1.556311e+09      7.000000   8493.000000           10.250000        4.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000
+2024-10-29 22:27:31,472 - client_0 - INFO - Transforming data to DMatrix format...
+2024-10-29 22:27:31,255 - client_0 - INFO - Loading data from C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv...
+2024-10-29 22:27:31,324 - client_0 - INFO - Data info:
+2024-10-29 22:27:31,337 - client_0 - INFO - None
+2024-10-29 22:27:31,337 - client_0 - INFO - Data description:
+2024-10-29 22:27:31,351 - client_0 - INFO -                  ts  fridge_temperature         label
+count  5.994400e+04        59944.000000  59944.000000
+mean   1.555034e+09            7.131876      0.416122
+std    1.101367e+06            3.619223      0.492918
+min    1.554061e+09            1.000000      0.000000
+25%    1.554061e+09            4.200000      0.000000
+50%    1.554203e+09            6.700000      0.000000
+75%    1.556246e+09           10.250000      1.000000
+max    1.556526e+09           14.000000      1.000000
+2024-10-29 22:27:31,352 - client_0 - INFO - First few rows of the data:
+2024-10-29 22:27:31,354 - client_0 - INFO -            ts       date        time  fridge_temperature temp_condition  label  type
+0  1556245180  25-Apr-19   19:19:40                 9.00           high      1  ddos
+1  1556245180  25-Apr-19   19:19:40                 9.25           high      1  ddos
+2  1556245185  25-Apr-19   19:19:45                12.65           high      1  ddos
+3  1556245185  25-Apr-19   19:19:45                 4.65            low      1  ddos
+4  1556245195  25-Apr-19   19:19:55                12.65           high      1  ddos
+2024-10-29 22:27:31,354 - client_0 - INFO - Dropping 'type' column...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding categorical variables...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding column: date
+2024-10-29 22:27:31,366 - client_0 - INFO - Encoding column: time
+2024-10-29 22:27:31,407 - client_0 - INFO - Encoding column: temp_condition
+2024-10-29 22:27:31,421 - client_0 - INFO - Data info after preprocessing:
+2024-10-29 22:27:31,425 - client_0 - INFO - None
+2024-10-29 22:27:31,426 - client_0 - INFO - Data description after preprocessing:
+2024-10-29 22:27:31,441 - client_0 - INFO -                  ts          date          time  fridge_temperature  temp_condition         label
+count  5.994400e+04  59944.000000  59944.000000        59944.000000    59944.000000  59944.000000
+mean   1.555034e+09      4.268017   4412.371997            7.131876        2.071667      0.416122
+std    1.101367e+06      2.514148   5658.703156            3.619223        1.655336      0.492918
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000      0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000      0.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000      0.000000
+75%    1.556246e+09      7.000000   8473.250000           10.250000        4.000000      1.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000      1.000000
+2024-10-29 22:27:31,441 - client_0 - INFO - Splitting data into train and test sets...
+2024-10-29 22:27:31,459 - client_0 - INFO - Train set shape: (47955, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Test set shape: (11989, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Creating 2 equal partitions...
+2024-10-29 22:27:31,460 - client_0 - INFO - Partition 0 shape: (23977, 5)
+2024-10-29 22:27:31,472 - client_0 - INFO - Describing Partition 0:                  ts          date          time  fridge_temperature  temp_condition
+count  2.397700e+04  23977.000000  23977.000000        23977.000000    23977.000000
+mean   1.555036e+09      4.257538   4431.152855            7.133332        2.074947
+std    1.101797e+06      2.514147   5677.960110            3.617386        1.656630
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000
+75%    1.556311e+09      7.000000   8493.000000           10.250000        4.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000
+2024-10-29 22:27:31,472 - client_0 - INFO - Transforming data to DMatrix format...
+2024-10-29 22:27:31,255 - client_0 - INFO - Loading data from C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv...
+2024-10-29 22:27:31,324 - client_0 - INFO - Data info:
+2024-10-29 22:27:31,337 - client_0 - INFO - None
+2024-10-29 22:27:31,337 - client_0 - INFO - Data description:
+2024-10-29 22:27:31,351 - client_0 - INFO -                  ts  fridge_temperature         label
+count  5.994400e+04        59944.000000  59944.000000
+mean   1.555034e+09            7.131876      0.416122
+std    1.101367e+06            3.619223      0.492918
+min    1.554061e+09            1.000000      0.000000
+25%    1.554061e+09            4.200000      0.000000
+50%    1.554203e+09            6.700000      0.000000
+75%    1.556246e+09           10.250000      1.000000
+max    1.556526e+09           14.000000      1.000000
+2024-10-29 22:27:31,352 - client_0 - INFO - First few rows of the data:
+2024-10-29 22:27:31,354 - client_0 - INFO -            ts       date        time  fridge_temperature temp_condition  label  type
+0  1556245180  25-Apr-19   19:19:40                 9.00           high      1  ddos
+1  1556245180  25-Apr-19   19:19:40                 9.25           high      1  ddos
+2  1556245185  25-Apr-19   19:19:45                12.65           high      1  ddos
+3  1556245185  25-Apr-19   19:19:45                 4.65            low      1  ddos
+4  1556245195  25-Apr-19   19:19:55                12.65           high      1  ddos
+2024-10-29 22:27:31,354 - client_0 - INFO - Dropping 'type' column...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding categorical variables...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding column: date
+2024-10-29 22:27:31,366 - client_0 - INFO - Encoding column: time
+2024-10-29 22:27:31,407 - client_0 - INFO - Encoding column: temp_condition
+2024-10-29 22:27:31,421 - client_0 - INFO - Data info after preprocessing:
+2024-10-29 22:27:31,425 - client_0 - INFO - None
+2024-10-29 22:27:31,426 - client_0 - INFO - Data description after preprocessing:
+2024-10-29 22:27:31,441 - client_0 - INFO -                  ts          date          time  fridge_temperature  temp_condition         label
+count  5.994400e+04  59944.000000  59944.000000        59944.000000    59944.000000  59944.000000
+mean   1.555034e+09      4.268017   4412.371997            7.131876        2.071667      0.416122
+std    1.101367e+06      2.514148   5658.703156            3.619223        1.655336      0.492918
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000      0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000      0.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000      0.000000
+75%    1.556246e+09      7.000000   8473.250000           10.250000        4.000000      1.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000      1.000000
+2024-10-29 22:27:31,441 - client_0 - INFO - Splitting data into train and test sets...
+2024-10-29 22:27:31,459 - client_0 - INFO - Train set shape: (47955, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Test set shape: (11989, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Creating 2 equal partitions...
+2024-10-29 22:27:31,460 - client_0 - INFO - Partition 0 shape: (23977, 5)
+2024-10-29 22:27:31,472 - client_0 - INFO - Describing Partition 0:                  ts          date          time  fridge_temperature  temp_condition
+count  2.397700e+04  23977.000000  23977.000000        23977.000000    23977.000000
+mean   1.555036e+09      4.257538   4431.152855            7.133332        2.074947
+std    1.101797e+06      2.514147   5677.960110            3.617386        1.656630
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000
+75%    1.556311e+09      7.000000   8493.000000           10.250000        4.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000
+2024-10-29 22:27:31,472 - client_0 - INFO - Transforming data to DMatrix format...
+2024-10-29 22:27:31,255 - client_0 - INFO - Loading data from C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv...
+2024-10-29 22:27:31,324 - client_0 - INFO - Data info:
+2024-10-29 22:27:31,337 - client_0 - INFO - None
+2024-10-29 22:27:31,337 - client_0 - INFO - Data description:
+2024-10-29 22:27:31,351 - client_0 - INFO -                  ts  fridge_temperature         label
+count  5.994400e+04        59944.000000  59944.000000
+mean   1.555034e+09            7.131876      0.416122
+std    1.101367e+06            3.619223      0.492918
+min    1.554061e+09            1.000000      0.000000
+25%    1.554061e+09            4.200000      0.000000
+50%    1.554203e+09            6.700000      0.000000
+75%    1.556246e+09           10.250000      1.000000
+max    1.556526e+09           14.000000      1.000000
+2024-10-29 22:27:31,352 - client_0 - INFO - First few rows of the data:
+2024-10-29 22:27:31,354 - client_0 - INFO -            ts       date        time  fridge_temperature temp_condition  label  type
+0  1556245180  25-Apr-19   19:19:40                 9.00           high      1  ddos
+1  1556245180  25-Apr-19   19:19:40                 9.25           high      1  ddos
+2  1556245185  25-Apr-19   19:19:45                12.65           high      1  ddos
+3  1556245185  25-Apr-19   19:19:45                 4.65            low      1  ddos
+4  1556245195  25-Apr-19   19:19:55                12.65           high      1  ddos
+2024-10-29 22:27:31,354 - client_0 - INFO - Dropping 'type' column...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding categorical variables...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding column: date
+2024-10-29 22:27:31,366 - client_0 - INFO - Encoding column: time
+2024-10-29 22:27:31,407 - client_0 - INFO - Encoding column: temp_condition
+2024-10-29 22:27:31,421 - client_0 - INFO - Data info after preprocessing:
+2024-10-29 22:27:31,425 - client_0 - INFO - None
+2024-10-29 22:27:31,426 - client_0 - INFO - Data description after preprocessing:
+2024-10-29 22:27:31,441 - client_0 - INFO -                  ts          date          time  fridge_temperature  temp_condition         label
+count  5.994400e+04  59944.000000  59944.000000        59944.000000    59944.000000  59944.000000
+mean   1.555034e+09      4.268017   4412.371997            7.131876        2.071667      0.416122
+std    1.101367e+06      2.514148   5658.703156            3.619223        1.655336      0.492918
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000      0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000      0.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000      0.000000
+75%    1.556246e+09      7.000000   8473.250000           10.250000        4.000000      1.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000      1.000000
+2024-10-29 22:27:31,441 - client_0 - INFO - Splitting data into train and test sets...
+2024-10-29 22:27:31,459 - client_0 - INFO - Train set shape: (47955, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Test set shape: (11989, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Creating 2 equal partitions...
+2024-10-29 22:27:31,460 - client_0 - INFO - Partition 0 shape: (23977, 5)
+2024-10-29 22:27:31,472 - client_0 - INFO - Describing Partition 0:                  ts          date          time  fridge_temperature  temp_condition
+count  2.397700e+04  23977.000000  23977.000000        23977.000000    23977.000000
+mean   1.555036e+09      4.257538   4431.152855            7.133332        2.074947
+std    1.101797e+06      2.514147   5677.960110            3.617386        1.656630
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000
+75%    1.556311e+09      7.000000   8493.000000           10.250000        4.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000
+2024-10-29 22:27:31,472 - client_0 - INFO - Transforming data to DMatrix format...
+2024-10-29 22:27:31,255 - client_0 - INFO - Loading data from C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv...
+2024-10-29 22:27:31,324 - client_0 - INFO - Data info:
+2024-10-29 22:27:31,337 - client_0 - INFO - None
+2024-10-29 22:27:31,337 - client_0 - INFO - Data description:
+2024-10-29 22:27:31,351 - client_0 - INFO -                  ts  fridge_temperature         label
+count  5.994400e+04        59944.000000  59944.000000
+mean   1.555034e+09            7.131876      0.416122
+std    1.101367e+06            3.619223      0.492918
+min    1.554061e+09            1.000000      0.000000
+25%    1.554061e+09            4.200000      0.000000
+50%    1.554203e+09            6.700000      0.000000
+75%    1.556246e+09           10.250000      1.000000
+max    1.556526e+09           14.000000      1.000000
+2024-10-29 22:27:31,352 - client_0 - INFO - First few rows of the data:
+2024-10-29 22:27:31,354 - client_0 - INFO -            ts       date        time  fridge_temperature temp_condition  label  type
+0  1556245180  25-Apr-19   19:19:40                 9.00           high      1  ddos
+1  1556245180  25-Apr-19   19:19:40                 9.25           high      1  ddos
+2  1556245185  25-Apr-19   19:19:45                12.65           high      1  ddos
+3  1556245185  25-Apr-19   19:19:45                 4.65            low      1  ddos
+4  1556245195  25-Apr-19   19:19:55                12.65           high      1  ddos
+2024-10-29 22:27:31,354 - client_0 - INFO - Dropping 'type' column...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding categorical variables...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding column: date
+2024-10-29 22:27:31,366 - client_0 - INFO - Encoding column: time
+2024-10-29 22:27:31,407 - client_0 - INFO - Encoding column: temp_condition
+2024-10-29 22:27:31,421 - client_0 - INFO - Data info after preprocessing:
+2024-10-29 22:27:31,425 - client_0 - INFO - None
+2024-10-29 22:27:31,426 - client_0 - INFO - Data description after preprocessing:
+2024-10-29 22:27:31,441 - client_0 - INFO -                  ts          date          time  fridge_temperature  temp_condition         label
+count  5.994400e+04  59944.000000  59944.000000        59944.000000    59944.000000  59944.000000
+mean   1.555034e+09      4.268017   4412.371997            7.131876        2.071667      0.416122
+std    1.101367e+06      2.514148   5658.703156            3.619223        1.655336      0.492918
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000      0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000      0.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000      0.000000
+75%    1.556246e+09      7.000000   8473.250000           10.250000        4.000000      1.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000      1.000000
+2024-10-29 22:27:31,441 - client_0 - INFO - Splitting data into train and test sets...
+2024-10-29 22:27:31,459 - client_0 - INFO - Train set shape: (47955, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Test set shape: (11989, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Creating 2 equal partitions...
+2024-10-29 22:27:31,460 - client_0 - INFO - Partition 0 shape: (23977, 5)
+2024-10-29 22:27:31,472 - client_0 - INFO - Describing Partition 0:                  ts          date          time  fridge_temperature  temp_condition
+count  2.397700e+04  23977.000000  23977.000000        23977.000000    23977.000000
+mean   1.555036e+09      4.257538   4431.152855            7.133332        2.074947
+std    1.101797e+06      2.514147   5677.960110            3.617386        1.656630
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000
+75%    1.556311e+09      7.000000   8493.000000           10.250000        4.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000
+2024-10-29 22:27:31,472 - client_0 - INFO - Transforming data to DMatrix format...
+2024-10-29 22:27:31,255 - client_0 - INFO - Loading data from C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv...
+2024-10-29 22:27:31,324 - client_0 - INFO - Data info:
+2024-10-29 22:27:31,337 - client_0 - INFO - None
+2024-10-29 22:27:31,337 - client_0 - INFO - Data description:
+2024-10-29 22:27:31,351 - client_0 - INFO -                  ts  fridge_temperature         label
+count  5.994400e+04        59944.000000  59944.000000
+mean   1.555034e+09            7.131876      0.416122
+std    1.101367e+06            3.619223      0.492918
+min    1.554061e+09            1.000000      0.000000
+25%    1.554061e+09            4.200000      0.000000
+50%    1.554203e+09            6.700000      0.000000
+75%    1.556246e+09           10.250000      1.000000
+max    1.556526e+09           14.000000      1.000000
+2024-10-29 22:27:31,352 - client_0 - INFO - First few rows of the data:
+2024-10-29 22:27:31,354 - client_0 - INFO -            ts       date        time  fridge_temperature temp_condition  label  type
+0  1556245180  25-Apr-19   19:19:40                 9.00           high      1  ddos
+1  1556245180  25-Apr-19   19:19:40                 9.25           high      1  ddos
+2  1556245185  25-Apr-19   19:19:45                12.65           high      1  ddos
+3  1556245185  25-Apr-19   19:19:45                 4.65            low      1  ddos
+4  1556245195  25-Apr-19   19:19:55                12.65           high      1  ddos
+2024-10-29 22:27:31,354 - client_0 - INFO - Dropping 'type' column...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding categorical variables...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding column: date
+2024-10-29 22:27:31,366 - client_0 - INFO - Encoding column: time
+2024-10-29 22:27:31,407 - client_0 - INFO - Encoding column: temp_condition
+2024-10-29 22:27:31,421 - client_0 - INFO - Data info after preprocessing:
+2024-10-29 22:27:31,425 - client_0 - INFO - None
+2024-10-29 22:27:31,426 - client_0 - INFO - Data description after preprocessing:
+2024-10-29 22:27:31,441 - client_0 - INFO -                  ts          date          time  fridge_temperature  temp_condition         label
+count  5.994400e+04  59944.000000  59944.000000        59944.000000    59944.000000  59944.000000
+mean   1.555034e+09      4.268017   4412.371997            7.131876        2.071667      0.416122
+std    1.101367e+06      2.514148   5658.703156            3.619223        1.655336      0.492918
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000      0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000      0.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000      0.000000
+75%    1.556246e+09      7.000000   8473.250000           10.250000        4.000000      1.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000      1.000000
+2024-10-29 22:27:31,441 - client_0 - INFO - Splitting data into train and test sets...
+2024-10-29 22:27:31,459 - client_0 - INFO - Train set shape: (47955, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Test set shape: (11989, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Creating 2 equal partitions...
+2024-10-29 22:27:31,460 - client_0 - INFO - Partition 0 shape: (23977, 5)
+2024-10-29 22:27:31,472 - client_0 - INFO - Describing Partition 0:                  ts          date          time  fridge_temperature  temp_condition
+count  2.397700e+04  23977.000000  23977.000000        23977.000000    23977.000000
+mean   1.555036e+09      4.257538   4431.152855            7.133332        2.074947
+std    1.101797e+06      2.514147   5677.960110            3.617386        1.656630
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000
+75%    1.556311e+09      7.000000   8493.000000           10.250000        4.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000
+2024-10-29 22:27:31,472 - client_0 - INFO - Transforming data to DMatrix format...
+2024-10-29 22:27:31,255 - client_0 - INFO - Loading data from C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv...
+2024-10-29 22:27:31,324 - client_0 - INFO - Data info:
+2024-10-29 22:27:31,337 - client_0 - INFO - None
+2024-10-29 22:27:31,337 - client_0 - INFO - Data description:
+2024-10-29 22:27:31,351 - client_0 - INFO -                  ts  fridge_temperature         label
+count  5.994400e+04        59944.000000  59944.000000
+mean   1.555034e+09            7.131876      0.416122
+std    1.101367e+06            3.619223      0.492918
+min    1.554061e+09            1.000000      0.000000
+25%    1.554061e+09            4.200000      0.000000
+50%    1.554203e+09            6.700000      0.000000
+75%    1.556246e+09           10.250000      1.000000
+max    1.556526e+09           14.000000      1.000000
+2024-10-29 22:27:31,352 - client_0 - INFO - First few rows of the data:
+2024-10-29 22:27:31,354 - client_0 - INFO -            ts       date        time  fridge_temperature temp_condition  label  type
+0  1556245180  25-Apr-19   19:19:40                 9.00           high      1  ddos
+1  1556245180  25-Apr-19   19:19:40                 9.25           high      1  ddos
+2  1556245185  25-Apr-19   19:19:45                12.65           high      1  ddos
+3  1556245185  25-Apr-19   19:19:45                 4.65            low      1  ddos
+4  1556245195  25-Apr-19   19:19:55                12.65           high      1  ddos
+2024-10-29 22:27:31,354 - client_0 - INFO - Dropping 'type' column...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding categorical variables...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding column: date
+2024-10-29 22:27:31,366 - client_0 - INFO - Encoding column: time
+2024-10-29 22:27:31,407 - client_0 - INFO - Encoding column: temp_condition
+2024-10-29 22:27:31,421 - client_0 - INFO - Data info after preprocessing:
+2024-10-29 22:27:31,425 - client_0 - INFO - None
+2024-10-29 22:27:31,426 - client_0 - INFO - Data description after preprocessing:
+2024-10-29 22:27:31,441 - client_0 - INFO -                  ts          date          time  fridge_temperature  temp_condition         label
+count  5.994400e+04  59944.000000  59944.000000        59944.000000    59944.000000  59944.000000
+mean   1.555034e+09      4.268017   4412.371997            7.131876        2.071667      0.416122
+std    1.101367e+06      2.514148   5658.703156            3.619223        1.655336      0.492918
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000      0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000      0.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000      0.000000
+75%    1.556246e+09      7.000000   8473.250000           10.250000        4.000000      1.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000      1.000000
+2024-10-29 22:27:31,441 - client_0 - INFO - Splitting data into train and test sets...
+2024-10-29 22:27:31,459 - client_0 - INFO - Train set shape: (47955, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Test set shape: (11989, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Creating 2 equal partitions...
+2024-10-29 22:27:31,460 - client_0 - INFO - Partition 0 shape: (23977, 5)
+2024-10-29 22:27:31,472 - client_0 - INFO - Describing Partition 0:                  ts          date          time  fridge_temperature  temp_condition
+count  2.397700e+04  23977.000000  23977.000000        23977.000000    23977.000000
+mean   1.555036e+09      4.257538   4431.152855            7.133332        2.074947
+std    1.101797e+06      2.514147   5677.960110            3.617386        1.656630
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000
+75%    1.556311e+09      7.000000   8493.000000           10.250000        4.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000
+2024-10-29 22:27:31,472 - client_0 - INFO - Transforming data to DMatrix format...
+2024-10-29 22:27:31,255 - client_0 - INFO - Loading data from C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv...
+2024-10-29 22:27:31,324 - client_0 - INFO - Data info:
+2024-10-29 22:27:31,337 - client_0 - INFO - None
+2024-10-29 22:27:31,337 - client_0 - INFO - Data description:
+2024-10-29 22:27:31,351 - client_0 - INFO -                  ts  fridge_temperature         label
+count  5.994400e+04        59944.000000  59944.000000
+mean   1.555034e+09            7.131876      0.416122
+std    1.101367e+06            3.619223      0.492918
+min    1.554061e+09            1.000000      0.000000
+25%    1.554061e+09            4.200000      0.000000
+50%    1.554203e+09            6.700000      0.000000
+75%    1.556246e+09           10.250000      1.000000
+max    1.556526e+09           14.000000      1.000000
+2024-10-29 22:27:31,352 - client_0 - INFO - First few rows of the data:
+2024-10-29 22:27:31,354 - client_0 - INFO -            ts       date        time  fridge_temperature temp_condition  label  type
+0  1556245180  25-Apr-19   19:19:40                 9.00           high      1  ddos
+1  1556245180  25-Apr-19   19:19:40                 9.25           high      1  ddos
+2  1556245185  25-Apr-19   19:19:45                12.65           high      1  ddos
+3  1556245185  25-Apr-19   19:19:45                 4.65            low      1  ddos
+4  1556245195  25-Apr-19   19:19:55                12.65           high      1  ddos
+2024-10-29 22:27:31,354 - client_0 - INFO - Dropping 'type' column...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding categorical variables...
+2024-10-29 22:27:31,358 - client_0 - INFO - Encoding column: date
+2024-10-29 22:27:31,366 - client_0 - INFO - Encoding column: time
+2024-10-29 22:27:31,407 - client_0 - INFO - Encoding column: temp_condition
+2024-10-29 22:27:31,421 - client_0 - INFO - Data info after preprocessing:
+2024-10-29 22:27:31,425 - client_0 - INFO - None
+2024-10-29 22:27:31,426 - client_0 - INFO - Data description after preprocessing:
+2024-10-29 22:27:31,441 - client_0 - INFO -                  ts          date          time  fridge_temperature  temp_condition         label
+count  5.994400e+04  59944.000000  59944.000000        59944.000000    59944.000000  59944.000000
+mean   1.555034e+09      4.268017   4412.371997            7.131876        2.071667      0.416122
+std    1.101367e+06      2.514148   5658.703156            3.619223        1.655336      0.492918
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000      0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000      0.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000      0.000000
+75%    1.556246e+09      7.000000   8473.250000           10.250000        4.000000      1.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000      1.000000
+2024-10-29 22:27:31,441 - client_0 - INFO - Splitting data into train and test sets...
+2024-10-29 22:27:31,459 - client_0 - INFO - Train set shape: (47955, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Test set shape: (11989, 5)
+2024-10-29 22:27:31,459 - client_0 - INFO - Creating 2 equal partitions...
+2024-10-29 22:27:31,460 - client_0 - INFO - Partition 0 shape: (23977, 5)
+2024-10-29 22:27:31,472 - client_0 - INFO - Describing Partition 0:                  ts          date          time  fridge_temperature  temp_condition
+count  2.397700e+04  23977.000000  23977.000000        23977.000000    23977.000000
+mean   1.555036e+09      4.257538   4431.152855            7.133332        2.074947
+std    1.101797e+06      2.514147   5677.960110            3.617386        1.656630
+min    1.554061e+09      0.000000      0.000000            1.000000        0.000000
+25%    1.554061e+09      2.000000    360.000000            4.200000        1.000000
+50%    1.554203e+09      5.000000    584.000000            6.700000        2.000000
+75%    1.556311e+09      7.000000   8493.000000           10.250000        4.000000
+max    1.556526e+09      7.000000  18105.000000           14.000000        5.000000
+2024-10-29 22:27:31,472 - client_0 - INFO - Transforming data to DMatrix format...
