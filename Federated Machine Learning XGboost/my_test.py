@@ -79,7 +79,7 @@ def load_data(partition_id, num_clients):
     """Load and prepare Fridge data for two clients."""
     logger = setup_logger(partition_id)
     
-    fridge_file_path = r"C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv"  
+    fridge_file_path = r"C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_Network.csv"  
     
     data = load_and_preprocess_data(fridge_file_path, logger)
     

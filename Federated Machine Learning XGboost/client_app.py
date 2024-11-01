@@ -17,7 +17,7 @@ from flwr.common import (
     Status,
 )
 
-from task import load_data, replace_keys
+from my_test import load_data, replace_keys
 
 # Configure logging
 logging.basicConfig(
