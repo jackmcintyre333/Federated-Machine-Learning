@@ -15,11 +15,20 @@ logging.basicConfig(
 )
 def evaluate_metrics_aggregation(eval_metrics):
     """Return aggregated metrics for evaluation."""
-    total_num = sum([num for num, _ in eval_metrics])
+    logging.info(f"Evaluation metrics: {eval_metrics}")
+    #Evaluation metrics: [(5995, {'AUC': 1.0, 'precision': 1.0, 'accuracy': 1.0, 'recall': 1.0, 'F1': 1.0}), (5995, {'AUC': 0.9998382923673997, 'precision': 1.0, 'accuracy': 0.6702251876563803, 'recall': 0.36060802069857695, 'F1': 0.5300689327311623})]
+    total_num = 0
+    for count, _ in eval_metrics:
+        total_num += count
+    logging.info(f"Total number of samples: {total_num}")
     
     metrics_aggregated = {}
     for metric in ["accuracy", "precision", "recall", "F1", "AUC"]:
-        metrics_aggregated[metric] = sum([metrics[metric] * num for num, metrics in eval_metrics]) / total_num
+        logging.info(f"Aggregating metric: {metric}")
+        metric_sum = 0
+        for count, metric_values in eval_metrics:
+            metric_sum += metric_values[metric] * count
+        metrics_aggregated[metric] = metric_sum / total_num
     
     return metrics_aggregated
 
