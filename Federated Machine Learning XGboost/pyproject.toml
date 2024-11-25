@@ -25,7 +25,7 @@ clientapp = "my_client:app"
 
 [tool.flwr.app.config]
 # ServerApp
-num-server-rounds = 10
+num-server-rounds = 3
 fraction-fit = 0.1
 fraction-evaluate = 0.1
 

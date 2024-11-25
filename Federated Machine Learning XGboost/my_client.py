@@ -2,6 +2,7 @@
 
 import warnings
 from sklearn.metrics import f1_score, roc_auc_score, accuracy_score, recall_score, precision_score
+import numpy as np
 import logging
 from flwr.common.context import Context
 import xgboost as xgb
@@ -17,14 +18,14 @@ from flwr.common import (
     Status,
 )
 
-from my_test import load_data, replace_keys
+from my_test import load_data, replace_keys, setup_logger
 
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('logfile'),
+        logging.FileHandler('client_logs'),
         logging.StreamHandler()  
     ]
 )
@@ -98,20 +99,32 @@ class FlowerClient(Client):
 
     def evaluate(self, ins: EvaluateIns) -> EvaluateRes:
         logger.info("Starting evaluation")
-        
+        partician_id = self.context.node_config["partition-id"]
+        logger.info(f"Partition ID: {partician_id}")
         # Load global model
         bst = xgb.Booster(params=self.params)
         para_b = bytearray(ins.parameters.tensors[0])
         bst.load_model(para_b)
-        logger.info("Loaded global model for evaluation")
+        logger.info(f"Partition ID: {partician_id} Loaded global model for evaluation")
 
         # Make predictions based on the global model
         y_pred = bst.predict(self.valid_dmatrix)
         y_true = self.valid_dmatrix.get_label()
-
+        
+        # logging.info("Predictions:")
+        # for val in y_pred:
+        #     logging.info(val)
+        # logging.info("True labels:")
+        # for val in y_true:
+        #     logging.info(val)
+        
         # Convert probabilities to binary predictions
         y_pred_binary = (y_pred > 0.5).astype(int)
-
+        logging.info(f"Partition ID: {partician_id} - Mean (Accuracy): %.2f", np.mean(y_pred_binary == y_true))
+        logging.info(f"Partition ID: {partician_id} - True Positives: %d", np.sum((y_pred_binary == 1) & (y_true == 1)))
+        logging.info(f"Partition ID: {partician_id} - True Negatives: %d", np.sum((y_pred_binary == 0) & (y_true == 0)))
+        logging.info(f"Partition ID: {partician_id} - False Positives: %d", np.sum((y_pred_binary == 1) & (y_true == 0)))
+        logging.info(f"Partition ID: {partician_id} - False Negatives: %d", np.sum((y_pred_binary == 0) & (y_true == 1)))
         # Calculate metrics
         accuracy = accuracy_score(y_true, y_pred_binary)
         precision = precision_score(y_true, y_pred_binary)
@@ -130,7 +143,7 @@ class FlowerClient(Client):
         
         logger.info("Evaluation metrics:")
         for metric_name, metric_value in metrics_log.items():
-            logger.info(f"{metric_name}: {metric_value:.4f}")
+            logger.info(f"Partition ID: {partician_id} - {metric_name}: {metric_value:.4f}")
 
         return EvaluateRes(
             status=Status(
