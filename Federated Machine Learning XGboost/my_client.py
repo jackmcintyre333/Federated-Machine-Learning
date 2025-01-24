@@ -111,6 +111,11 @@ class FlowerClient(Client):
         y_pred = bst.predict(self.valid_dmatrix)
         y_true = self.valid_dmatrix.get_label()
         
+        # Log the predictions and true labels for comparison
+        logging.info("Predictions vs True Labels:")
+        for pred, true in zip(y_pred, y_true):
+            logging.info(f"Prediction: {pred}, True Label: {true}")
+        
         # logging.info("Predictions:")
         # for val in y_pred:
         #     logging.info(val)
