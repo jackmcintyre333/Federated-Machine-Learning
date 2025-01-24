@@ -64,7 +64,7 @@ def split_data(data, test_size=0.2, random_state=42, logger=None):
     """Split the data into train and test sets."""
     X = data.drop('label', axis=1)
     y = data['label']
-    
+    #take startify out
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
     
     if logger:
