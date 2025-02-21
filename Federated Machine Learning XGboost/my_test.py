@@ -4,6 +4,11 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
+import random
+
+# Set random seed for reproducibility
+random.seed(42)
+np.random.seed(42)
 
 class PartitionFilter(logging.Filter):
     """Custom filter to add partition ID to log records."""
@@ -82,6 +87,8 @@ def transform_to_dmatrix(X, y):
 def load_data(partition_id, num_clients):
     """Load and prepare data data for clients."""
     logger = setup_logger(partition_id)
+    np.random.seed(42)
+    random.seed(42)
     
     data_file_path = r"C:\Users\jackm\OneDrive\Documents\Bitbucket-ids\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost\Datasets\Train_Test_IoT_Fridge.csv"  
     
@@ -110,6 +117,9 @@ def load_data(partition_id, num_clients):
     logger.info(f"Test set - Positive samples: {np.sum(y_test)}, Negative samples: {len(y_test) - np.sum(y_test)}")
     logger.info(f"Training set statistics:\n{X_train.describe().to_string()}")
     logger.info(f"Test set statistics:\n{X_test.describe().to_string()}")
+    
+    logger.info(f"Partition {partition_id} - Class distribution: {data_partition['label'].value_counts()}")
+
     
     # Ensure num_clients is 2
     assert num_clients == 2, "This implementation supports only 2 clients"

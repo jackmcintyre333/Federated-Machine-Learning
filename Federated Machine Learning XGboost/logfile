@@ -1,102 +1,102 @@
-2025-01-24 14:02:04,231 - DEBUG - Supported backends: ['ray']
-2025-01-24 14:02:04,230 - INFO - Starting Flower ServerApp, config: num_rounds=3, no round_timeout
-2025-01-24 14:02:04,231 - DEBUG - Flower SuperNode will load and validate ClientApp `my_client:app`
-2025-01-24 14:02:04,232 - INFO - 
-2025-01-24 14:02:04,233 - INFO - [INIT]
-2025-01-24 14:02:04,233 - INFO - Using initial global parameters provided by strategy
-2025-01-24 14:02:04,236 - DEBUG - Loading ClientApp `my_client:app`
-2025-01-24 14:02:04,236 - INFO - Starting evaluation of initial global parameters
-2025-01-24 14:02:04,236 - INFO - Evaluation returned no results (`None`)
-2025-01-24 14:02:04,236 - INFO - 
-2025-01-24 14:02:04,236 - INFO - [ROUND 1]
-2025-01-24 14:02:04,238 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
-2025-01-24 14:02:04,819 - DEBUG - Initialising: RayBackend
-2025-01-24 14:02:04,819 - DEBUG - Backend config: {'init_args': {'logging_level': 30, 'log_to_driver': True}, 'client_resources': {'num_cpus': 2, 'num_gpus': 0}, 'actor': {'tensorflow': 0}}
-2025-01-24 14:02:05,714 - DEBUG - Attempting to acquire lock 2205555598032 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\node_ip_address.json.lock
-2025-01-24 14:02:05,717 - DEBUG - Lock 2205555598032 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\node_ip_address.json.lock
-2025-01-24 14:02:05,717 - DEBUG - Attempting to release lock 2205555598032 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\node_ip_address.json.lock
-2025-01-24 14:02:05,719 - DEBUG - Lock 2205555598032 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\node_ip_address.json.lock
-2025-01-24 14:02:05,720 - DEBUG - Attempting to acquire lock 2205555518672 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,720 - DEBUG - Lock 2205555518672 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,721 - DEBUG - Attempting to release lock 2205555518672 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,722 - DEBUG - Lock 2205555518672 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,722 - DEBUG - Attempting to acquire lock 2205555589904 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,722 - DEBUG - Lock 2205555589904 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,730 - DEBUG - Attempting to release lock 2205555589904 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,731 - DEBUG - Lock 2205555589904 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,731 - DEBUG - Attempting to acquire lock 2205555518672 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,731 - DEBUG - Lock 2205555518672 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,743 - DEBUG - Attempting to release lock 2205555518672 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,744 - DEBUG - Lock 2205555518672 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,744 - DEBUG - Attempting to acquire lock 2205555518672 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,744 - DEBUG - Lock 2205555518672 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,755 - DEBUG - Attempting to release lock 2205555518672 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,756 - DEBUG - Lock 2205555518672 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,756 - DEBUG - Attempting to acquire lock 2205555518672 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,756 - DEBUG - Lock 2205555518672 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,763 - DEBUG - Attempting to release lock 2205555518672 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:05,764 - DEBUG - Lock 2205555518672 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-01-24_14-02-05_713693_27160\ports_by_node.json.lock
-2025-01-24 14:02:09,655 - DEBUG - Constructed ActorPool with: 4 actors
-2025-01-24 14:02:09,655 - DEBUG - Using InMemoryState
-2025-01-24 14:02:18,647 - INFO - aggregate_fit: received 2 results and 0 failures
-2025-01-24 14:02:18,648 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
-2025-01-24 14:02:19,652 - INFO - aggregate_evaluate: received 2 results and 0 failures
-2025-01-24 14:02:19,652 - INFO - Evaluation metrics: [(5995, {'AUC': 0.9998382923673997, 'precision': 1.0, 'accuracy': 0.9998331943286072, 'recall': 0.9996765847347995, 'F1': 0.9998382662138121}), (5995, {'AUC': 1.0, 'precision': 1.0, 'accuracy': 1.0, 'recall': 1.0, 'F1': 1.0})]
-2025-01-24 14:02:19,652 - INFO - Total number of samples: 11990
-2025-01-24 14:02:19,653 - INFO - Aggregating metric: accuracy
-2025-01-24 14:02:19,653 - INFO - Aggregating metric: precision
-2025-01-24 14:02:19,653 - INFO - Aggregating metric: recall
-2025-01-24 14:02:19,653 - INFO - Aggregating metric: F1
-2025-01-24 14:02:19,653 - INFO - Aggregating metric: AUC
-2025-01-24 14:02:19,653 - INFO - 
-2025-01-24 14:02:19,653 - INFO - [ROUND 2]
-2025-01-24 14:02:19,654 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
-2025-01-24 14:02:20,658 - INFO - aggregate_fit: received 2 results and 0 failures
-2025-01-24 14:02:20,659 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
-2025-01-24 14:02:21,662 - INFO - aggregate_evaluate: received 2 results and 0 failures
-2025-01-24 14:02:21,663 - INFO - Evaluation metrics: [(5995, {'AUC': 1.0, 'precision': 1.0, 'accuracy': 1.0, 'recall': 1.0, 'F1': 1.0}), (5995, {'AUC': 0.9998382923673997, 'precision': 1.0, 'accuracy': 0.9998331943286072, 'recall': 0.9996765847347995, 'F1': 0.9998382662138121})]
-2025-01-24 14:02:21,663 - INFO - Total number of samples: 11990
-2025-01-24 14:02:21,663 - INFO - Aggregating metric: accuracy
-2025-01-24 14:02:21,663 - INFO - Aggregating metric: precision
-2025-01-24 14:02:21,663 - INFO - Aggregating metric: recall
-2025-01-24 14:02:21,663 - INFO - Aggregating metric: F1
-2025-01-24 14:02:21,663 - INFO - Aggregating metric: AUC
-2025-01-24 14:02:21,663 - INFO - 
-2025-01-24 14:02:21,664 - INFO - [ROUND 3]
-2025-01-24 14:02:21,664 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
-2025-01-24 14:02:22,667 - INFO - aggregate_fit: received 2 results and 0 failures
-2025-01-24 14:02:22,668 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
-2025-01-24 14:02:23,672 - INFO - aggregate_evaluate: received 2 results and 0 failures
-2025-01-24 14:02:23,673 - INFO - Evaluation metrics: [(5995, {'AUC': 0.9998382923673997, 'precision': 1.0, 'accuracy': 0.9998331943286072, 'recall': 0.9996765847347995, 'F1': 0.9998382662138121}), (5995, {'AUC': 1.0, 'precision': 1.0, 'accuracy': 1.0, 'recall': 1.0, 'F1': 1.0})]
-2025-01-24 14:02:23,673 - INFO - Total number of samples: 11990
-2025-01-24 14:02:23,673 - INFO - Aggregating metric: accuracy
-2025-01-24 14:02:23,673 - INFO - Aggregating metric: precision
-2025-01-24 14:02:23,673 - INFO - Aggregating metric: recall
-2025-01-24 14:02:23,673 - INFO - Aggregating metric: F1
-2025-01-24 14:02:23,673 - INFO - Aggregating metric: AUC
-2025-01-24 14:02:23,673 - INFO - 
-2025-01-24 14:02:23,673 - INFO - [SUMMARY]
-2025-01-24 14:02:23,674 - INFO - Run finished 3 round(s) in 19.44s
-2025-01-24 14:02:23,674 - INFO - 	History (loss, distributed):
-2025-01-24 14:02:23,675 - INFO - 		round 1: 0
-2025-01-24 14:02:23,675 - INFO - 		round 2: 0
-2025-01-24 14:02:23,676 - INFO - 		round 3: 0
-2025-01-24 14:02:23,676 - INFO - 	History (metrics, distributed, evaluate):
-2025-01-24 14:02:23,676 - INFO - 	{'AUC': [(1, 0.9999191461836999),
-2025-01-24 14:02:23,677 - INFO - 	         (2, 0.9999191461836999),
-2025-01-24 14:02:23,677 - INFO - 	         (3, 0.9999191461836999)],
-2025-01-24 14:02:23,677 - INFO - 	 'F1': [(1, 0.999919133106906), (2, 0.999919133106906), (3, 0.999919133106906)],
-2025-01-24 14:02:23,678 - INFO - 	 'accuracy': [(1, 0.9999165971643036),
-2025-01-24 14:02:23,678 - INFO - 	              (2, 0.9999165971643036),
-2025-01-24 14:02:23,678 - INFO - 	              (3, 0.9999165971643036)],
-2025-01-24 14:02:23,678 - INFO - 	 'precision': [(1, 1.0), (2, 1.0), (3, 1.0)],
-2025-01-24 14:02:23,678 - INFO - 	 'recall': [(1, 0.9998382923673997),
-2025-01-24 14:02:23,679 - INFO - 	            (2, 0.9998382923673997),
-2025-01-24 14:02:23,679 - INFO - 	            (3, 0.9998382923673997)]}
-2025-01-24 14:02:23,679 - INFO - 
-2025-01-24 14:02:23,681 - DEBUG - ServerApp finished running.
-2025-01-24 14:02:23,681 - DEBUG - ServerApp finished running.
-2025-01-24 14:02:23,694 - DEBUG - Triggered stop event for Simulation Engine.
-2025-01-24 14:02:24,457 - DEBUG - Terminated 4 actors
-2025-01-24 14:02:24,863 - DEBUG - Terminated RayBackend
-2025-01-24 14:02:24,863 - DEBUG - Stopping Simulation Engine now.
+2025-02-21 13:27:34,426 - INFO - Starting Flower ServerApp, config: num_rounds=3, no round_timeout
+2025-02-21 13:27:34,429 - INFO - 
+2025-02-21 13:27:34,432 - DEBUG - Supported backends: ['ray']
+2025-02-21 13:27:34,433 - DEBUG - Flower SuperNode will load and validate ClientApp `my_client:app`
+2025-02-21 13:27:34,432 - INFO - [INIT]
+2025-02-21 13:27:34,435 - INFO - Using initial global parameters provided by strategy
+2025-02-21 13:27:34,435 - INFO - Starting evaluation of initial global parameters
+2025-02-21 13:27:34,436 - INFO - Evaluation returned no results (`None`)
+2025-02-21 13:27:34,438 - DEBUG - Loading ClientApp `my_client:app`
+2025-02-21 13:27:34,436 - INFO - 
+2025-02-21 13:27:34,439 - INFO - [ROUND 1]
+2025-02-21 13:27:34,439 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-02-21 13:27:35,357 - DEBUG - Initialising: RayBackend
+2025-02-21 13:27:35,358 - DEBUG - Backend config: {'init_args': {'logging_level': 30, 'log_to_driver': True}, 'client_resources': {'num_cpus': 2, 'num_gpus': 0}, 'actor': {'tensorflow': 0}}
+2025-02-21 13:27:36,692 - DEBUG - Attempting to acquire lock 2138748662160 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\node_ip_address.json.lock
+2025-02-21 13:27:36,693 - DEBUG - Lock 2138748662160 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\node_ip_address.json.lock
+2025-02-21 13:27:36,695 - DEBUG - Attempting to release lock 2138748662160 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\node_ip_address.json.lock
+2025-02-21 13:27:36,695 - DEBUG - Lock 2138748662160 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\node_ip_address.json.lock
+2025-02-21 13:27:36,696 - DEBUG - Attempting to acquire lock 2138752429456 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,696 - DEBUG - Lock 2138752429456 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,698 - DEBUG - Attempting to release lock 2138752429456 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,698 - DEBUG - Lock 2138752429456 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,698 - DEBUG - Attempting to acquire lock 2138748662160 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,699 - DEBUG - Lock 2138748662160 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,720 - DEBUG - Attempting to release lock 2138748662160 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,721 - DEBUG - Lock 2138748662160 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,721 - DEBUG - Attempting to acquire lock 2138748662160 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,721 - DEBUG - Lock 2138748662160 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,743 - DEBUG - Attempting to release lock 2138748662160 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,744 - DEBUG - Lock 2138748662160 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,744 - DEBUG - Attempting to acquire lock 2138748662160 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,745 - DEBUG - Lock 2138748662160 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,758 - DEBUG - Attempting to release lock 2138748662160 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,758 - DEBUG - Lock 2138748662160 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,758 - DEBUG - Attempting to acquire lock 2138719542992 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,759 - DEBUG - Lock 2138719542992 acquired on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,769 - DEBUG - Attempting to release lock 2138719542992 on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:36,770 - DEBUG - Lock 2138719542992 released on C:\Users\jackm\AppData\Local\Temp\ray\session_2025-02-21_13-27-36_689760_1864\ports_by_node.json.lock
+2025-02-21 13:27:42,131 - DEBUG - Constructed ActorPool with: 4 actors
+2025-02-21 13:27:42,132 - DEBUG - Using InMemoryState
+2025-02-21 13:27:57,115 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-02-21 13:27:57,116 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-02-21 13:27:59,121 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-02-21 13:27:59,122 - INFO - Evaluation metrics: [(5995, {'AUC': 1.0, 'precision': 1.0, 'accuracy': 1.0, 'recall': 1.0, 'F1': 1.0}), (5995, {'AUC': 0.9998382923673997, 'precision': 1.0, 'accuracy': 0.9998331943286072, 'recall': 0.9996765847347995, 'F1': 0.9998382662138121})]
+2025-02-21 13:27:59,122 - INFO - Total number of samples: 11990
+2025-02-21 13:27:59,123 - INFO - Aggregating metric: accuracy
+2025-02-21 13:27:59,123 - INFO - Aggregating metric: precision
+2025-02-21 13:27:59,123 - INFO - Aggregating metric: recall
+2025-02-21 13:27:59,123 - INFO - Aggregating metric: F1
+2025-02-21 13:27:59,123 - INFO - Aggregating metric: AUC
+2025-02-21 13:27:59,123 - INFO - 
+2025-02-21 13:27:59,123 - INFO - [ROUND 2]
+2025-02-21 13:27:59,124 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-02-21 13:28:00,129 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-02-21 13:28:00,131 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-02-21 13:28:02,139 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-02-21 13:28:02,139 - INFO - Evaluation metrics: [(5995, {'AUC': 1.0, 'precision': 1.0, 'accuracy': 1.0, 'recall': 1.0, 'F1': 1.0}), (5995, {'AUC': 0.9998382923673997, 'precision': 1.0, 'accuracy': 0.9998331943286072, 'recall': 0.9996765847347995, 'F1': 0.9998382662138121})]
+2025-02-21 13:28:02,140 - INFO - Total number of samples: 11990
+2025-02-21 13:28:02,140 - INFO - Aggregating metric: accuracy
+2025-02-21 13:28:02,140 - INFO - Aggregating metric: precision
+2025-02-21 13:28:02,140 - INFO - Aggregating metric: recall
+2025-02-21 13:28:02,140 - INFO - Aggregating metric: F1
+2025-02-21 13:28:02,140 - INFO - Aggregating metric: AUC
+2025-02-21 13:28:02,140 - INFO - 
+2025-02-21 13:28:02,140 - INFO - [ROUND 3]
+2025-02-21 13:28:02,141 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-02-21 13:28:03,144 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-02-21 13:28:03,146 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-02-21 13:28:05,152 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-02-21 13:28:05,154 - INFO - Evaluation metrics: [(5995, {'AUC': 1.0, 'precision': 1.0, 'accuracy': 1.0, 'recall': 1.0, 'F1': 1.0}), (5995, {'AUC': 0.9998382923673997, 'precision': 1.0, 'accuracy': 0.9998331943286072, 'recall': 0.9996765847347995, 'F1': 0.9998382662138121})]
+2025-02-21 13:28:05,154 - INFO - Total number of samples: 11990
+2025-02-21 13:28:05,154 - INFO - Aggregating metric: accuracy
+2025-02-21 13:28:05,154 - INFO - Aggregating metric: precision
+2025-02-21 13:28:05,154 - INFO - Aggregating metric: recall
+2025-02-21 13:28:05,154 - INFO - Aggregating metric: F1
+2025-02-21 13:28:05,154 - INFO - Aggregating metric: AUC
+2025-02-21 13:28:05,154 - INFO - 
+2025-02-21 13:28:05,155 - INFO - [SUMMARY]
+2025-02-21 13:28:05,155 - INFO - Run finished 3 round(s) in 30.72s
+2025-02-21 13:28:05,156 - INFO - 	History (loss, distributed):
+2025-02-21 13:28:05,157 - INFO - 		round 1: 0
+2025-02-21 13:28:05,157 - INFO - 		round 2: 0
+2025-02-21 13:28:05,158 - INFO - 		round 3: 0
+2025-02-21 13:28:05,158 - INFO - 	History (metrics, distributed, evaluate):
+2025-02-21 13:28:05,158 - INFO - 	{'AUC': [(1, 0.9999191461836999),
+2025-02-21 13:28:05,159 - INFO - 	         (2, 0.9999191461836999),
+2025-02-21 13:28:05,159 - INFO - 	         (3, 0.9999191461836999)],
+2025-02-21 13:28:05,160 - INFO - 	 'F1': [(1, 0.999919133106906), (2, 0.999919133106906), (3, 0.999919133106906)],
+2025-02-21 13:28:05,160 - INFO - 	 'accuracy': [(1, 0.9999165971643036),
+2025-02-21 13:28:05,160 - INFO - 	              (2, 0.9999165971643036),
+2025-02-21 13:28:05,161 - INFO - 	              (3, 0.9999165971643036)],
+2025-02-21 13:28:05,161 - INFO - 	 'precision': [(1, 1.0), (2, 1.0), (3, 1.0)],
+2025-02-21 13:28:05,161 - INFO - 	 'recall': [(1, 0.9998382923673997),
+2025-02-21 13:28:05,162 - INFO - 	            (2, 0.9998382923673997),
+2025-02-21 13:28:05,162 - INFO - 	            (3, 0.9998382923673997)]}
+2025-02-21 13:28:05,162 - INFO - 
+2025-02-21 13:28:05,164 - DEBUG - ServerApp finished running.
+2025-02-21 13:28:05,164 - DEBUG - ServerApp finished running.
+2025-02-21 13:28:05,164 - DEBUG - Triggered stop event for Simulation Engine.
+2025-02-21 13:28:06,136 - DEBUG - Terminated 4 actors
+2025-02-21 13:28:08,244 - DEBUG - Terminated RayBackend
+2025-02-21 13:28:08,245 - DEBUG - Stopping Simulation Engine now.

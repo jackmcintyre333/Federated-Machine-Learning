@@ -6,6 +6,12 @@ from flwr.common import Context, Parameters
 from flwr.server import ServerApp, ServerAppComponents, ServerConfig
 from flwr.server.strategy import FedXgbBagging
 import logging
+import random
+import numpy as np
+
+random.seed(42)
+np.random.seed(42)
+
 # Configure logging
 logging.basicConfig(
     filename='logfile',          

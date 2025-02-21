@@ -26,13 +26,13 @@ clientapp = "my_client:app"
 [tool.flwr.app.config]
 # ServerApp
 num-server-rounds = 3
-fraction-fit = 0.1
-fraction-evaluate = 0.1
+fraction-fit = 1.0
+fraction-evaluate = 1.0
 
 # ClientApp
 local-epochs = 1
 params.objective = "binary:logistic"
-params.eta = 0.1 # Learning rate
+params.eta = 0.05 # Learning rate
 params.max-depth = 8
 params.eval-metric = "auc"
 params.nthread = 16
