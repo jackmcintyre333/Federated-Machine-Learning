@@ -1,4 +1,9 @@
 # Federated-Machine-Learning
+Note:
+Flower_initial_implemenatation is first try at utilizing flower and currently yields a variety of results
+FLWR_FML is a second try at flower from scratch and trys to create a bare bones flower implementation - currently not working
+FML_MVP is a minimum viable product of federated machine learning that just employs the basics using sklearn and XGBoost - no other framework but the implementation does work
+
 To run:
 in ..\Federated Machine Learning GitHub\Federated-Machine-Learning\Federated Machine Learning XGboost
 run the command pip install -e
