@@ -1,0 +1,27 @@
+2025-03-28 14:43:11,698 - INFO - Starting client
+2025-03-28 14:43:11,699 - INFO - Loading and preprocessing data for client 2
+2025-03-28 14:43:11,808 - INFO - Loaded data shape: (59944, 7)
+2025-03-28 14:43:11,812 - INFO - Features shape: (59944, 5)
+2025-03-28 14:43:11,813 - INFO - Target shape: (59944,)
+2025-03-28 14:43:11,817 - INFO - Found 3 categorical columns
+2025-03-28 14:43:11,817 - DEBUG - Encoding column: date
+2025-03-28 14:43:11,834 - DEBUG - Encoding column: time
+2025-03-28 14:43:11,874 - DEBUG - Encoding column: temp_condition
+2025-03-28 14:43:11,886 - DEBUG - Encoding target variable
+2025-03-28 14:43:11,916 - INFO - Client 2 class distribution:
+2025-03-28 14:43:11,916 - INFO - Train set: [28000 19955]
+2025-03-28 14:43:11,918 - INFO - Test set: [1400  997]
+2025-03-28 14:43:11,918 - INFO - Validation set: [5600 3992]
+2025-03-28 14:43:11,919 - INFO - Data loading and preprocessing completed after 0.22 seconds
+2025-03-28 14:43:11,920 - INFO - Initializing XGBoostClient
+2025-03-28 14:43:11,920 - INFO - Training data shape: (47955, 5)
+2025-03-28 14:43:11,920 - INFO - Test data shape: (2397, 5)
+2025-03-28 14:43:11,921 - INFO - Number of unique classes: 2
+2025-03-28 14:43:11,922 - INFO - Connecting to server at 127.0.0.1:8080
+2025-03-28 14:43:11,935 - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2025-03-28 14:43:11,939 - DEBUG - ChannelConnectivity.IDLE
+2025-03-28 14:43:11,940 - DEBUG - ChannelConnectivity.CONNECTING
+2025-03-28 14:43:11,942 - DEBUG - ChannelConnectivity.READY
+2025-03-28 14:54:46,530 - DEBUG - gRPC channel closed
+2025-03-28 14:54:46,531 - INFO - Disconnect and shut down
+2025-03-28 14:54:46,531 - INFO - Client finished after 694.83 seconds

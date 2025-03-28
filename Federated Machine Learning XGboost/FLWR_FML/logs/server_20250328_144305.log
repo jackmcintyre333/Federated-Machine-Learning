@@ -1,0 +1,22 @@
+2025-03-28 14:43:05,499 - INFO - Starting Flower server
+2025-03-28 14:43:05,500 - INFO - Initializing XGBoostStrategy
+2025-03-28 14:43:05,500 - INFO - Server configuration:
+2025-03-28 14:43:05,500 - INFO - Min available clients: 2
+2025-03-28 14:43:05,500 - INFO - Min fit clients: 2
+2025-03-28 14:43:05,501 - INFO - Min evaluate clients: 2
+2025-03-28 14:43:05,501 - INFO - Starting server on 127.0.0.1:8080
+2025-03-28 14:43:05,502 - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2025-03-28 14:43:05,523 - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2025-03-28 14:43:05,524 - INFO - [INIT]
+2025-03-28 14:43:05,524 - INFO - Requesting initial parameters from one random client
+2025-03-28 14:43:08,920 - INFO - Received initial parameters from one random client
+2025-03-28 14:43:08,920 - INFO - Starting evaluation of initial global parameters
+2025-03-28 14:43:08,921 - INFO - Evaluation returned no results (`None`)
+2025-03-28 14:43:08,921 - INFO - 
+2025-03-28 14:43:08,921 - INFO - [ROUND 1]
+2025-03-28 14:43:10,392 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-03-28 14:43:11,760 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-03-28 14:43:11,761 - INFO - Starting round 1 at 2025-03-28 14:43:11
+2025-03-28 14:43:11,761 - INFO - Round 1 - Waiting for client updates...
+2025-03-28 14:43:11,761 - INFO - Round 1 - Number of results: 2
+2025-03-28 14:43:11,762 - INFO - Round 1 - Number of failures: 0

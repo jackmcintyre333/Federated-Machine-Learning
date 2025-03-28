@@ -1,0 +1,40 @@
+2025-03-28 14:43:08,194 - INFO - Starting client
+2025-03-28 14:43:08,196 - INFO - Loading and preprocessing data for client 0
+2025-03-28 14:43:08,274 - INFO - Loaded data shape: (59944, 7)
+2025-03-28 14:43:08,278 - INFO - Features shape: (59944, 5)
+2025-03-28 14:43:08,278 - INFO - Target shape: (59944,)
+2025-03-28 14:43:08,281 - INFO - Found 3 categorical columns
+2025-03-28 14:43:08,281 - DEBUG - Encoding column: date
+2025-03-28 14:43:08,294 - DEBUG - Encoding column: time
+2025-03-28 14:43:08,330 - DEBUG - Encoding column: temp_condition
+2025-03-28 14:43:08,344 - DEBUG - Encoding target variable
+2025-03-28 14:43:08,380 - INFO - Client 0 class distribution:
+2025-03-28 14:43:08,380 - INFO - Train set: [28000 19955]
+2025-03-28 14:43:08,381 - INFO - Test set: [1400  997]
+2025-03-28 14:43:08,381 - INFO - Validation set: [5600 3992]
+2025-03-28 14:43:08,381 - INFO - Data loading and preprocessing completed after 0.18 seconds
+2025-03-28 14:43:08,384 - INFO - Initializing XGBoostClient
+2025-03-28 14:43:08,384 - INFO - Training data shape: (47955, 5)
+2025-03-28 14:43:08,384 - INFO - Test data shape: (2397, 5)
+2025-03-28 14:43:08,386 - INFO - Number of unique classes: 2
+2025-03-28 14:43:08,386 - INFO - Connecting to server at 127.0.0.1:8080
+2025-03-28 14:43:08,398 - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2025-03-28 14:43:08,402 - DEBUG - ChannelConnectivity.IDLE
+2025-03-28 14:43:08,405 - DEBUG - ChannelConnectivity.READY
+2025-03-28 14:43:08,417 - INFO - 
+2025-03-28 14:43:08,423 - INFO - Received: get_parameters message f96f4dcc-5955-49ad-9f22-c4f4dbc6cbc2
+2025-03-28 14:43:08,423 - DEBUG - Getting model parameters
+2025-03-28 14:43:08,424 - INFO - Creating new XGBoost model
+2025-03-28 14:43:08,917 - INFO - Sent reply
+2025-03-28 14:43:10,395 - INFO - 
+2025-03-28 14:43:10,396 - INFO - Received: train message ede40d39-d6d6-42d2-85a7-d349348d15a8
+2025-03-28 14:43:10,397 - INFO - Starting local training at 2025-03-28 14:43:10
+2025-03-28 14:43:10,397 - INFO - Starting local training
+2025-03-28 14:43:10,397 - DEBUG - Updating model parameters
+2025-03-28 14:43:10,425 - INFO - Training model on local data
+2025-03-28 14:43:11,261 - INFO - Local training completed after 0.86 seconds
+2025-03-28 14:43:11,261 - DEBUG - Getting model parameters
+2025-03-28 14:43:11,303 - INFO - Sent reply
+2025-03-28 14:54:46,575 - DEBUG - gRPC channel closed
+2025-03-28 14:54:46,576 - INFO - Disconnect and shut down
+2025-03-28 14:54:46,577 - INFO - Client finished after 698.38 seconds
