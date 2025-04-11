@@ -23,5 +23,5 @@ framework = PySwiftFederatedFramework(df=train_df, label_col=label_column, num_c
 # Train models
 models = framework.run_federated_training()
 
-# Evaluate
-framework.evaluate_models(test_df)
+# Evaluate the aggregated FedAvg model
+framework.evaluate_fedavg_model(test_df)

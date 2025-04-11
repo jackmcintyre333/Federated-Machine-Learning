@@ -41,29 +41,37 @@ class PySwiftFederatedFramework:
         # For MVP, just return all models
         return models
 
-    def evaluate_models(self, test_data: pd.DataFrame):
+    # Add this new method to your class
+    def evaluate_fedavg_model(self, test_data: pd.DataFrame):
         X_test = test_data.drop(columns=[self.label_col])
         y_test = test_data[self.label_col]
 
-        for i, client in enumerate(self.clients):
+        # Collect all client predictions (probabilities)
+        all_probs = []
+        for client in self.clients:
             model = client.get_model()
-            preds = model.predict(X_test)
+            probas = model.predict_proba(X_test)
+            all_probs.append(probas)
 
-            acc = accuracy_score(y_test, preds)
-            prec = precision_score(y_test, preds, average='weighted', zero_division=0)
-            rec = recall_score(y_test, preds, average='weighted', zero_division=0)
-            f1 = f1_score(y_test, preds, average='weighted', zero_division=0)
+        # Average probabilities (FedAvg simulation)
+        avg_probs = np.mean(np.array(all_probs), axis=0)
+        avg_preds = np.argmax(avg_probs, axis=1)
 
-            print(f"\n📊 Client {i} Evaluation on Global Test Set:")
-            print(f"  Accuracy : {acc:.4f}")
-            print(f"  Precision: {prec:.4f}")
-            print(f"  Recall   : {rec:.4f}")
-            print(f"  F1 Score : {f1:.4f}")
-            cm = confusion_matrix(y_test, preds)
-            if cm.shape == (2, 2):
-                tn, fp, fn, tp = cm.ravel()
-                print("  Confusion Matrix (Binary):")
-                print(f"    TP: {tp}, FP: {fp}, TN: {tn}, FN: {fn}")
-            else:
-                print("  Confusion Matrix (Multi-class):")
-                print(cm)
+        acc = accuracy_score(y_test, avg_preds)
+        prec = precision_score(y_test, avg_preds, average='weighted', zero_division=0)
+        rec = recall_score(y_test, avg_preds, average='weighted', zero_division=0)
+        f1 = f1_score(y_test, avg_preds, average='weighted', zero_division=0)
+
+        print(f"\n🔁 Federated Averaged Model Evaluation:")
+        print(f"  Accuracy : {acc:.4f}")
+        print(f"  Precision: {prec:.4f}")
+        print(f"  Recall   : {rec:.4f}")
+        print(f"  F1 Score : {f1:.4f}")
+        cm = confusion_matrix(y_test, avg_preds)
+        if cm.shape == (2, 2):
+            tn, fp, fn, tp = cm.ravel()
+            print("  Confusion Matrix (Binary):")
+            print(f"    TP: {tp}, FP: {fp}, TN: {tn}, FN: {fn}")
+        else:
+            print("  Confusion Matrix (Multi-class):")
+            print(cm)

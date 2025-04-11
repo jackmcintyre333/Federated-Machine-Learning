@@ -1,0 +1,109 @@
+---
+
+PySwift Federated Machine Learning Framework (MVP)
+
+Overview:
+PySwift is a lightweight federated machine learning framework in Python designed to simulate decentralized training across multiple clients. It uses a tabular dataset (e.g., IoT fridge telemetry data) and trains local models independently across 'n' clients. The framework now supports Federated Averaging (FedAvg) for ensemble-style aggregation of client predictions.
+
+---
+
+Architecture:
+
+1. fridge.py (Driver Script)
+- Loads dataset from a CSV file (Train_Test_IoT_Fridge.csv)
+- Drops irrelevant columns (e.g., "type")
+- Applies LabelEncoder to convert categorical columns into numeric values
+- Splits the dataset into stratified training and test sets
+- Initializes the federated framework with 5 clients
+- Trains local models independently on each client
+- Evaluates:
+    - Each client's model on the shared test set
+    - FedAvg ensemble of client models using soft voting over probabilities
+
+2. pyswift_federated.py (Core Framework)
+Defines two main classes:
+
+   - FederatedClient:
+     - Represents an individual federated client
+     - Stores the client’s local data
+     - Trains a local XGBClassifier model using XGBoost
+
+   - PySwiftFederatedFramework:
+     - Splits the training data across clients
+     - Coordinates distributed training
+     - Provides two evaluation modes:
+         1. Per-client evaluation on the global test set
+         2. Federated Averaged model evaluation (aggregates predictions across clients)
+
+---
+
+Design Features:
+
+- Federated Data Splitting:
+  - Uses numpy array_split to shuffle and divide training data into client subsets
+
+- Model Training:
+  - Each client trains an XGBoost classifier independently (binary:logistic objective)
+
+- Evaluation Modes:
+  1. Per-Client Evaluation:
+     - Evaluates each model on the global test set
+     - Metrics: Accuracy, Precision, Recall, F1 Score, Confusion Matrix
+
+  2. Federated Averaged Evaluation (FedAvg):
+     - Aggregates probabilities across client models (soft voting)
+     - Averages the result and makes final predictions
+     - Evaluates the averaged predictions on the global test set
+     - Uses the same metrics as above
+
+---
+
+How to Run:
+
+1. Install Dependencies:
+Run the following command in your terminal:
+
+pip install -r requirements.txt
+
+2. Project Structure:
+Your directory should look like this:
+
+PySwiftFederated/
+├── fridge.py                  -> Driver script
+├── pyswift_federated.py       -> Federated learning core logic
+├── Train_Test_IoT_Fridge.csv  -> Dataset
+├── requirements.txt           -> Python dependencies
+
+3. Run the Script:
+To execute the training and evaluation, run:
+
+python fridge.py
+
+Example Output:
+Training on client 0
+Training on client 1
+...
+
+Client 0 Evaluation on Global Test Set:
+  Accuracy : 0.9450
+  Precision: 0.9453
+  Recall   : 0.9450
+  F1 Score : 0.9449
+  Confusion Matrix (Binary):
+    TP: 46, FP: 2, TN: 49, FN: 3
+
+Federated Averaged Model Evaluation:
+  Accuracy : 0.9633
+  Precision: 0.9641
+  Recall   : 0.9633
+  F1 Score : 0.9632
+  Confusion Matrix (Binary):
+    TP: 48, FP: 1, TN: 50, FN: 1
+
+---
+
+Author:
+Jack McIntyre
+
+---
+
