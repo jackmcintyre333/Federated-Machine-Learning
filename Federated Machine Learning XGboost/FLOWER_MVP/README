@@ -1,0 +1,6 @@
+To run:
+Create three terminals
+run the commands:
+python server.py
+python client.py 0
+python client.py 1

@@ -18,7 +18,7 @@ for col in df.columns:
 train_df, test_df = train_test_split(df, test_size=0.2, random_state=42, stratify=df[label_column])
 
 # Initialize the framework
-framework = PySwiftFederatedFramework(df=train_df, label_col=label_column, num_clients=5)
+framework = PySwiftFederatedFramework(df=train_df, label_col=label_column, num_clients=10)
 
 # Train models
 models = framework.run_federated_training()
